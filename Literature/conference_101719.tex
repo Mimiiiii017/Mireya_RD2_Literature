@@ -11,7 +11,7 @@
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
 
-\title{A Comparative Study of Monolithic and Modular Backend Architectures in a Full-Stack Issue Tracking Web Application\\
+\title{A Comparative Study of Monolithic and Modular Architectures in a Dataset Driven Case Tracking Web Application\\
 % {\footnotesize \textsuperscript{*}Note: Sub-titles are not captured in Xplore and
 % should not be used}
 \thanks{Identify applicable funding agency here. If none, delete this.}
@@ -37,36 +37,20 @@ component, formatting, style, styling, insert
 \end{IEEEkeywords}
 
 \section{Introduction}
-This document is a model and instructions for \LaTeX.
-Please observe the conference page limits. 
 
-\section{Ease of Use}
 
-\subsection{Maintaining the Integrity of the Specifications}
+\subsection{Description of Theme and Topic Rationale}
 
-The IEEEtran class file is used to format your paper and style the text. All margins, 
-column widths, line spaces, and text fonts are prescribed; please do not 
-alter them. You may note peculiarities. For example, the head margin
-measures proportionately more than is customary. This measurement 
-and others are deliberate, using specifications that anticipate your paper 
-as one part of the entire proceedings, and not as an independent document. 
-Please do not revise any of the current designations.
 
-\section{Prepare Your Paper Before Styling}
-Before you begin to format your paper, first write and save the content as a 
-separate text file. Complete all content and organizational editing before 
-formatting. Please note sections \ref{AA}--\ref{SCM} below for more information on 
-proofreading, spelling and grammar.
+\subsection{Positioning and Research Onion}
 
-Keep your text and graphic files separate until after the text has been 
-formatted and styled. Do not number text heads---{\LaTeX} will do that 
-for you.
 
-\subsection{Abbreviations and Acronyms}\label{AA}
-Define abbreviations and acronyms the first time they are used in the text, 
-even after they have been defined in the abstract. Abbreviations such as 
-IEEE, SI, MKS, CGS, ac, dc, and rms do not have to be defined. Do not use 
-abbreviations in the title or heads unless they are unavoidable.
+\begin{figure}[htbp]
+\centerline{\includegraphics{../Images/research onion.png}}
+\caption{Research Onion for the Study}
+\label{fig}
+\end{figure}
+
 
 \subsection{Units}
 \begin{itemize}
@@ -223,21 +207,18 @@ acknowledgments in the unnumbered footnote on the first page.
 
 \vspace{12pt}
 \begin{thebibliography}{00}
-\bibitem{b1} L. F. Al-Qora’n and A. Al-Said Ahmad, “Modular Monolith Architecture in Cloud Environments: A Systematic Literature Review,” Future Internet, vol. 17, no. 11, Art. no. 496, 2025, doi: 10.3390/fi17110496. 
-\bibitem{b2} R. Su and X. Li, “Modular Monolith: Is This the Trend in Software Architecture?,” in Proc. 1st Int. Workshop on New Trends in Software Architecture (SATrends ’24), 2024, doi: 10.1145/3643657.3643911. 
-\bibitem{b3} C. Schröder, A. van der Feltz, A. Panichella, and M. Aniche, “Search-Based Software Re-Modularization: A Case Study at Adyen,” in Proc. IEEE/ACM 43rd Int. Conf. on Software Engineering: Software Engineering in Practice (ICSE-SEIP), 2021, pp. 81–90, doi: 10.1109/ICSE-SEIP52600.2021.00017.
-\bibitem{b4} E. Pisch, Y. Cai, R. Kazman, J. Lefever, and H. Fang, “M-score: An Empirically Derived Software Modularity Metric,” in Proc. ACM/IEEE Int. Symp. on Empirical Software Engineering and Measurement (ESEM), pp. 382–392, 2024, doi: 10.1145/3674805.3686697. 
-\bibitem{b5} P. Rachow and M. Riebisch, “An Architecture Smell Knowledge Base for Managing Architecture Technical Debt,” in Proc. IEEE/ACM Int. Conf. on Technical Debt (TechDebt), pp. 1–10, 2022, doi: 10.1145/3524843.3528092. 
-\bibitem{b6} P. Gnoyke, S. Schulze, and J. Krüger, “Evolution Patterns of Software-Architecture Smells: An Empirical Study of Intra- and Inter-Version Smells,” Journal of Systems and Software, vol. 217, Art. no. 112170, 2024, doi: 10.1016/j.jss.2024.112170. 
-\bibitem{b7} R. Jolak, S. Karlsson, and F. Dobslaw, “An Empirical Investigation of the Impact of Architectural Smells on Software Maintainability,” Journal of Systems and Software, vol. 225, Art. no. 112382, 2025, doi: 10.1016/j.jss.2025.112382. 
-\bibitem{b8} L. da S. Sousa, W. Oizumi, A. Garcia, A. Oliveira, D. Cedrim, and C. Lucena, “When Are Smells Indicators of Architectural Refactoring Opportunities? A Study of 50 Software Projects,” in Proc. 28th Int. Conf. on Program Comprehension (ICPC ’20), 2020, doi: 10.1145/3387904.3389276. 
-\bibitem{b9} H. Mumtaz, P. Singh, and K. Blincoe, “A Systematic Mapping Study on Architectural Smells Detection,” Journal of Systems and Software, vol. 173, Art. no. 110885, 2021, doi: 10.1016/j.jss.2020.110885. 
-\bibitem{b10} A. J. J. Tan, C. Y. Chong, and A. Aleti, “Closing the Loop for Software Remodularisation – REARRANGE: An Effort Estimation Approach for Software Clustering-Based Remodularisation,” in Companion Proc. IEEE/ACM Int. Conf. on Software Engineering (ICSE-Companion), 2023, pp. 326–327, doi: 10.1109/ICSE-Companion58688.2023.00090.
-\bibitem{b11} M. Esposito, M. Robredo, F. Arcelli Fontana, and V. Lenarduzzi, “On the Correlation Between Architectural Smells and Static Analysis Warnings,” Software Quality Journal, 2025, doi: 10.1007/s11219-025-09730-7. 
-\bibitem{b12} O. Özkan, C. Babur, and B. Tekinerdogan, “Refactoring with Domain-Driven Design in an Industrial Context: An Action Research Report,” Empirical Software Engineering, 2023, doi: 10.1007/s10664-023-10310-1. 
-\bibitem{b13} D. Sas, P. Avgeriou, R. Kruizinga, and R. Scheedler, “Exploring the Relation Between Co-changes and Architectural Smells,” SN Computer Science, 2021, doi: 10.1007/s42979-020-00407-5. 
-\bibitem{b14} N. Naveen, R. Singh, and A. Rathee, “Improving Software Modularity Using Software Remodularization: Challenges and Opportunities,” ITM Web of Conferences, vol. 54, Art. no. 01008, 2023, doi: 10.1051/itmconf/20235401008. 
-\bibitem{b15} G.-D. Schwarz, F. Quast, and D. Riehle, “Ensuring Syntactic Interoperability Using Consumer-Driven Contract Testing,” Software Testing, Verification and Reliability, 2025, doi: 10.1002/stvr.70006.
+\bibitem{b1} H. Mumtaz, P. Singh, and K. Blincoe, “A Systematic Mapping Study on Architectural Smells Detection,” Journal of Systems and Software, vol. 173, Art. no. 110885, 2021, doi: 10.1016/j.jss.2020.110885.
+\bibitem{b2} P. Rachow and M. Riebisch, “An Architecture Smell Knowledge Base for Managing Architecture Technical Debt,” in Proc. IEEE/ACM Int. Conf. on Technical Debt (TechDebt), pp. 1–10, 2022, doi: 10.1145/3524843.3528092.
+\bibitem{b3} R. Jolak, S. Karlsson, and F. Dobslaw, “An Empirical Investigation of the Impact of Architectural Smells on Software Maintainability,” Journal of Systems and Software, vol. 225, Art. no. 112382, 2025, doi: 10.1016/j.jss.2025.112382.
+\bibitem{b4} A. J. J. Tan, C. Y. Chong, and A. Aleti, “Closing the Loop for Software Remodularisation: REARRANGE, An Effort Estimation Approach for Software Clustering Based Remodularisation,” in Companion Proc. IEEE/ACM Int. Conf. on Software Engineering (ICSE-Companion), 2023, pp. 326–327, doi: 10.1109/ICSE-Companion58688.2023.00090.
+\bibitem{b5} H. Foidl, V. Golendukhina, R. Ramler, and M. Felderer, “Data pipeline quality: Influencing factors, root causes of data related issues, and processing problem areas for developers,” Journal of Systems and Software, vol. 207, Art. no. 111855, Jan. 2024, doi: 10.1016/j.jss.2023.111855.
+\bibitem{b6} P. Gnoyke, S. Schulze, and J. Krüger, “Evolution Patterns of Software-Architecture Smells: An Empirical Study of Intra- and Inter-Version Smells,” Journal of Systems and Software, vol. 217, Art. no. 112170, 2024, doi: 10.1016/j.jss.2024.112170.
+\bibitem{b7} D. Sas, P. Avgeriou, R. Kruizinga, and R. Scheedler, “Exploring the Relation Between Co-changes and Architectural Smells,” SN Computer Science, 2021, doi: 10.1007/s42979-020-00407-5.
+\bibitem{b8} E. Pisch, Y. Cai, R. Kazman, J. Lefever, and H. Fang, “M-score: An Empirically Derived Software Modularity Metric,” in Proc. ACM/IEEE Int. Symp. on Empirical Software Engineering and Measurement (ESEM), pp. 382–392, 2024, doi: 10.1145/3674805.3686697.
+\bibitem{b9} L. F. Al-Qora’n and A. Al-Said Ahmad, “Modular Monolith Architecture in Cloud Environments: A Systematic Literature Review,” Future Internet, vol. 17, no. 11, Art. no. 496, 2025, doi: 10.3390/fi17110496.
+\bibitem{b10} R. Su and X. Li, “Modular Monolith: Is This the Trend in Software Architecture?,” in Proc. 1st Int. Workshop on New Trends in Software Architecture (SATrends ’24), 2024, doi: 10.1145/3643657.3643911.
+\bibitem{b11} M. Esposito, M. Robredo, F. Arcelli Fontana, and V. Lenarduzzi, “On the Correlation Between Architectural Smells and Static Analysis Warnings,” Software Quality Journal, 2025, doi: 10.1007/s11219-025-09730-7.
+\bibitem{b12} C. Schröder, A. van der Feltz, A. Panichella, and M. Aniche, “Search Based Software Re Modularization: A Case Study at Adyen,” in Proc. IEEE/ACM 43rd Int. Conf. on Software Engineering: Software Engineering in Practice (ICSE-SEIP), 2021, pp. 81–90, doi: 10.1109/ICSE-SEIP52600.2021.00017.
 \end{thebibliography}
 % \vspace{12pt}
 % \color{red}
