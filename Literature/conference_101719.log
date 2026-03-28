@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.2.20)  6 MAR 2026 13:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.2.20)  27 MAR 2026 20:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -307,34 +307,22 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <../Images/reson.png, id=1, 2046.64626pt x 1094.0875pt>
 File: ../Images/reson.png Graphic file (type png)
 <use ../Images/reson.png>
-Package pdftex.def Info: ../Images/reson.png  used on input line 57.
+Package pdftex.def Info: ../Images/reson.png  used on input line 55.
 (pdftex.def)             Requested size: 189.0pt x 101.03456pt.
  [1{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
- <../Images/reson.png>]
-Underfull \hbox (badness 1735) in paragraph at lines 78--79
-\OT1/ptm/m/n/10 reviewed con-fer-ence pro-ceed-ings [1]{[12]. Non-academic
- []
-
-[2]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3]
-Underfull \hbox (badness 7649) in paragraph at lines 183--195
+ <../Images/reson.png>] [2]
+Underfull \hbox (badness 7649) in paragraph at lines 163--172
 \OT1/ptm/b/n/10 RQ3: \OT1/ptm/m/n/10 How does ar-chi-tec-ture type af-fect op-er-a-tional
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--195
+Underfull \hbox (badness 10000) in paragraph at lines 163--172
 
  []
 
-[4]
-Underfull \hbox (badness 1789) in paragraph at lines 272--273
-\OT1/ptm/m/n/8 Int. Conf. on Tech-ni-cal Debt (TechDebt), pp. 1{10, 2022, doi:
- []
-
+[3]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -346,25 +334,25 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[5] (./conference_101719.aux)
+[4] (./conference_101719.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4414 strings out of 467533
- 68209 string characters out of 5423668
- 503013 words of memory out of 5000000
- 33275 multiletter control sequences out of 15000+600000
- 669627 words of font info for 116 fonts, out of 8000000 for 9000
+ 4403 strings out of 467533
+ 68087 string characters out of 5423668
+ 502995 words of memory out of 5000000
+ 33264 multiletter control sequences out of 15000+600000
+ 669219 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,10n,65p,998b,371s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on conference_101719.pdf (5 pages, 244658 bytes).
+ 57i,10n,65p,1102b,375s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on conference_101719.pdf (4 pages, 231285 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
- 29 compressed objects within 1 object stream
+ 41 PDF objects out of 1000 (max. 8388607)
+ 24 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

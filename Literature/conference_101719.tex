@@ -42,12 +42,10 @@ component, formatting, style, styling, insert
 
 \section{Introduction}
 
-
 \subsection{Description of Theme and Topic Rationale}
-Backend architecture refers to how a server-side system is organised into components, responsibilities, and dependency boundaries [1]. A common architectural choice in backend development is whether to build a monolithic system, in which most functionality is implemented within one tightly connected codebase, or a modular or layered system, in which responsibilities are separated into clearer units such as routing, services, and data access [1]. This choice is important because architecture affects how easily a system can be changed, tested, and maintained over time. Research on architectural smells and technical debt shows that unclear boundaries and poor structure can increase long-term effort and reduce maintainability, supporting the need for evidence-based evaluation of architectural decisions [1]-[3].
+Backend architecture refers to how a server-side system is organised into components, responsibilities, and dependency boundaries. A common architectural choice in backend development is whether to build a monolithic system, in which most functionality is implemented within one tightly connected codebase, or a modular or layered system, in which responsibilities are separated into clearer units such as routing, services, and data access \cite{b5}. This choice is important because architecture affects how easily a system can be changed, tested, and maintained over time. Research on architectural smells, co-change behaviour, and modularity shows that unclear boundaries and poor structure can increase change propagation and reduce maintainability, which supports the need for evidence-based evaluation of architectural decisions \cite{b1}, \cite{b3}, \cite{b4}.
 
-This study focuses on a dataset-driven case-tracking application in order to compare these approaches in a controlled manner [5]. Two backends are built with the same user-facing behaviour, including importing a synthetic JSON dataset into PostgreSQL, validating and normalising records, logging import runs, and exposing search and trend functionality [5]. Comparing two implementations with identical requirements is appropriate because it allows differences in maintainability, testability, and operational performance to be measured under consistent conditions rather than assumed [3], [12].
-
+This study focuses on a dataset-driven case-tracking application in order to compare these approaches in a controlled manner. Two backends are built with the same user-facing behaviour, including importing a synthetic JSON dataset into PostgreSQL, validating and normalising records, logging import runs, and exposing search and trend functionality. Comparing two implementations with identical requirements is appropriate because it allows differences in maintainability, testability, and operational performance to be measured under consistent conditions rather than assumed. This type of comparative evaluation is also consistent with prior work on software re-modularisation and architecture-level assessment \cite{b4}, \cite{b7}.
 
 \subsection{Positioning and Research Onion}
 This study adopts a pragmatist philosophy because it aims to develop and evaluate a working software artefact and to draw conclusions from practical, measurable evidence. This position is appropriate because the outcome is assessed using objective metrics collected from the implemented systems rather than the researcher’s personal opinion. The study follows a deductive approach, as it seeks to test the predefined hypothesis that a modular or layered architecture provides better maintainability and testability than a monolithic design.
@@ -59,23 +57,22 @@ This study adopts a pragmatist philosophy because it aims to develop and evaluat
 \label{fig:research-onion}
 \end{figure}
 
-The research strategy is a controlled software experiment based on comparative benchmarking. Two backend implementations are developed with identical requirements, identical dataset ingestion behaviour, and the same API contract. The analysis uses a mono-method quantitative strategy, since the research questions are addressed through numerical measures that can be compared across both architectures, including structural metrics, testing results, and performance timings. The time horizon is cross-sectional with repeated runs, meaning that both systems are evaluated at the same stage of completion while measurements are repeated to reduce random variation in runtime results. Recent research also shows growing interest in modular monolith designs and modular boundary practices, while emphasising the need for clearer evaluation evidence across different contexts [9], [10].
+The research strategy is a controlled software experiment based on comparative benchmarking. Two backend implementations are developed with identical requirements, identical dataset ingestion behaviour, and the same API contract. The analysis uses a mono-method quantitative strategy, since the research questions are addressed through numerical measures that can be compared across both architectures, including structural metrics, testing results, and performance timings. The time horizon is cross-sectional with repeated runs, meaning that both systems are evaluated at the same stage of completion while measurements are repeated to reduce random variation in runtime results. Recent research also shows growing interest in modular monolith design and stronger modular boundary practices, while emphasising the value of architecture evaluation through modularity metrics and re-modularisation analysis \cite{b4}, \cite{b5}, \cite{b7}.
 
 \subsection{Background to this Research Theme}
-Architectural quality is closely related to maintainability, and architectural smells are recurring patterns that often indicate deeper design problems. Systematic evidence shows increasing interest in detecting and managing such smells as part of maintaining long-term system quality [1], while technical debt research also suggests that weak boundaries and widespread dependencies can create future cost [2]. Empirical studies further link the presence of smells to maintainability outcomes, indicating that architecture can affect measurable software quality rather than simply reflecting design preference [3].
+Architectural quality is closely related to maintainability, and architectural smells are recurring patterns that often indicate deeper design problems. Systematic evidence shows increasing interest in detecting such smells as part of maintaining long-term system quality \cite{b1}. Studies further show that co-changes and modularity are useful for understanding how architecture affects system evolution and maintainability \cite{b3}, \cite{b4}.
 
 \subsection{Hypothesis, Research Aim, and Purpose Statement}
-This study will test the hypothesis that a modular or layered architecture is more maintainable and testable than a monolithic architecture. 
+This study tests the hypothesis that a modular or layered architecture is more maintainable and testable than a monolithic architecture.
 
 The purpose of this controlled comparative experiment will be to test the theory that architectural modularity improves software quality by relating backend architecture type to maintainability and testability outcomes, while controlling for identical requirements, dataset, database schema, API contract, test suite, and runtime environment across both implementations. The independent variable will be backend architecture type, defined as a monolithic backend or a modular or layered backend. The dependent variables will be maintainability and testability, defined using tool-based structural measures and automated test evidence.
 
-
 \section{Literature Review}
-This section reviews the methodologies adopted in recent studies related to software architecture quality and modularity, with a focus on how researchers evaluate architectural smells, technical debt, maintainability, and remodularisation. To provide a structured and comparative lens, this review follows the logic of the research onion by considering research philosophy, methodological approach, strategy, time horizon, and evaluation procedures used to validate architecture-related hypotheses [1], [9].
+This section reviews the methodologies adopted in recent studies related to software architecture quality and modularity, with a focus on how researchers evaluate architectural smells, maintainability, modularity, and remodularisation. To provide a structured and comparative lens, this review follows the logic of the research onion by considering research philosophy, methodological approach, strategy, time horizon, and evaluation procedures used to validate architecture-related hypotheses \cite{b1}, \cite{b5}.
 
-Across the reviewed works, a largely positivist stance is evident, prioritising objective and measurable outcomes derived from software artefacts such as source code, repository history, and static analysis outputs [1], [3], [6]. Most studies follow a deductive approach by testing expectations such as whether architectural smells are associated with maintainability indicators, whether smell evolution can be observed across versions, or whether modularity can be captured through stronger quantitative metrics [3], [6], [8], [11]. The dominant strategies are empirical mining studies and tool-supported analyses, complemented by evidence synthesis through mapping studies and systematic reviews [1], [9]. Time horizons are commonly cross-sectional (single snapshot of systems) or version-based (repeated measures across releases) [6].
+Across the reviewed works, a largely positivist stance is evident, prioritising objective and measurable outcomes derived from software artefacts such as source code, repository history, and static analysis outputs \cite{b1}, \cite{b3}, \cite{b6}. Most studies follow a deductive approach by testing expectations such as whether architectural smells are associated with change behaviour, whether modularity can be captured through stronger quantitative metrics, or whether restructuring can improve software quality \cite{b3}, \cite{b4}, \cite{b6}, \cite{b7}. The dominant strategies are empirical mining studies and tool-supported analyses, complemented by evidence synthesis through mapping studies and workshop-based reviews \cite{b1}, \cite{b5}. Time horizons are commonly cross-sectional (single snapshot of systems) or version-based (repeated measures across releases) depending on the study design \cite{b3}.
 
-All sources included in this review are academic publications, including peer-reviewed journal articles and peer-reviewed conference proceedings [1]–[12]. Non-academic sources such as vendor documentation, architecture blogs, and practitioner case posts can support implementation decisions, but they are not treated as primary evidence here because they often do not report controlled variables, reproducible methods, or peer-reviewed evaluation.
+All sources included in this review are academic publications, including peer-reviewed journal articles, conference papers, and workshop papers \cite{b1}--\cite{b7}. Non-academic sources such as vendor documentation, architecture blogs, and practitioner case posts can support implementation decisions, but they are not treated as primary evidence here because they often do not report controlled variables, reproducible methods, or peer-reviewed evaluation.
 
 % \begin{figure}[htbp]
 % \centering
@@ -84,38 +81,27 @@ All sources included in this review are academic publications, including peer-re
 % \label{fig:literature-map}
 % \end{figure}
 
-
 \subsection{Methodologies of Similar Studies}
-[1] conducts a systematic mapping study on architectural smell detection. The methodology applies structured search and selection procedures, then categorises studies by detection approaches, data sources, tool support, and validation methods. This is strong for breadth and transparency, and it supports positioning by showing that detection practices are diverse and not fully standardised. However, mapping studies do not directly test outcomes such as improved maintainability, so they contribute classification and gap identification rather than causal evidence.
+\cite{b1} conducts a systematic mapping study on architectural smell detection. The methodology applies structured search and selection procedures, then categorises studies by detection approaches, data sources, tool support, and validation methods. This is strong for breadth and transparency, and it supports positioning by showing that detection practices are diverse and not fully standardised. However, mapping studies do not directly test outcomes such as improved maintainability, so they contribute classification and gap identification rather than causal evidence.
 
-[2] proposes an architecture smell knowledge base to support managing architecture technical debt. The contribution is knowledge structuring rather than benchmarking performance. Methodologically, it supports consistent definitions and links smells to debt concepts and management actions. Its limitation is that it provides limited direct quantitative evidence about whether specific architectures reduce maintainability cost, so it complements empirical studies rather than replacing them.
+\cite{b3} explores the relation between co-changes and architectural smells through repository mining. Co-change behaviour is used as a proxy for coupling and change propagation, then analysed alongside smell presence. The strength is that it is grounded in real maintenance activity. The limitation is that commit granularity and workflow conventions can distort co-change patterns, which can threaten internal validity if not carefully controlled.
 
-[3] provides an empirical investigation of how architectural smells relate to software maintainability. The methodology detects smells and compares them against maintainability-related indicators using quantitative analysis. A key strength is the use of measurable variables and repeatable pipelines. A limitation is that repository-based evidence is often correlational, meaning maintainability differences may be associated with smells while still being influenced by other factors such as team practices and feature churn.
+\cite{b4} proposes M-score as an empirically derived modularity metric. The methodology focuses on improving measurement quality, which is important because modularity is often used as a dependent variable in architecture evaluation. Stronger metrics support clearer comparison across systems. A limitation is that modularity is multi-dimensional, so M-score should be interpreted alongside complementary indicators such as complexity, test outcomes, and change impact.
 
-[6] examines evolution patterns of software-architecture smells across intra-version and inter-version settings. The methodology relies on repeated measurements across releases, which strengthens the evidence by moving beyond single-snapshot analysis. This supports trend-based claims about accumulation and persistence of smells. However, many influences change between versions, so the method is better for describing evolution than proving strict cause-and-effect.
+\cite{b6} investigates correlations between architectural smells and static analysis warnings. Methodologically, this triangulates architecture-level detection with another measurement source (static analysis), which can improve construct validity by showing alignment between different quality signals. However, correlations must be interpreted cautiously because static warnings vary in severity and may not uniformly reflect architectural structure.
 
-[7] explores the relation between co-changes and architectural smells through repository mining. Co-change behaviour is used as a proxy for coupling and change propagation, then analysed alongside smell presence. The strength is that it is grounded in real maintenance activity. The limitation is that commit granularity and workflow conventions can distort co-change patterns, which can threaten internal validity if not carefully controlled.
+\cite{b7} presents a search-based remodularisation case study at Adyen. Case study methodology supports practical relevance by evaluating restructuring in a realistic industrial setting. This provides strong context and feasibility evidence, but generalisability is reduced because results can depend on the organisation, codebase constraints, and local engineering practices.
 
-[8] proposes M-score as an empirically derived modularity metric. The methodology focuses on improving measurement quality, which is important because modularity is often used as a dependent variable in architecture evaluation. Stronger metrics support clearer comparison across systems. A limitation is that modularity is multi-dimensional, so M-score should be interpreted alongside complementary indicators such as complexity, test outcomes, and change impact.
+\cite{b2} proposes an effort estimation approach for clustering-based remodularisation in a conference companion venue. It supports framing restructuring cost and feasibility, but it is lighter empirical evidence compared to full-length journal studies.
 
-[11] investigates correlations between architectural smells and static analysis warnings. Methodologically, this triangulates architecture-level detection with another measurement source (static analysis), which can improve construct validity by showing alignment between different quality signals. However, correlations must be interpreted cautiously because static warnings vary in severity and may not uniformly reflect architectural structure.
-
-[12] presents a search-based remodularisation case study at Adyen. Case study methodology supports practical relevance by evaluating restructuring in a realistic industrial setting. This provides strong context and feasibility evidence, but generalisability is reduced because results can depend on the organisation, codebase constraints, and local engineering practices.
-
-[4] proposes an effort estimation approach for clustering-based remodularisation in a conference companion venue. It supports framing restructuring cost and feasibility, but it is lighter empirical evidence compared to full-length journal studies. Similarly, [10] discusses modular monolith as a trend in a workshop context, supporting conceptual positioning rather than providing strong controlled evaluation.
-
-[9] provides a systematic literature review on modular monolith architecture in cloud environments. This supports positioning by synthesising how modular monolith is defined and evaluated and highlights variation in metrics and methods. Its limitation is that review evidence depends on the quality and consistency of the underlying studies, which further motivates careful control in comparative experiments.
-
-Finally, [5] studies data pipeline quality by identifying influencing factors, root causes of data-related issues, and problem areas for developers. This is methodologically relevant to ingestion-based evaluation because it supports including operational and data-quality indicators (for example, validation errors and processing issues) as measurable outcomes within backend benchmarking.
-
+Similarly, \cite{b5} discusses modular monolith as a trend in a workshop context, supporting conceptual positioning rather than providing strong controlled evaluation.
 
 \subsection{Comparisons of Studies}
-Across the reviewed studies, a consistent emphasis on measurable evidence is visible, but three methodological families emerge, with differences in how strongly they support causal conclusions. Evidence synthesis papers such as [1] and [9] provide structured overviews and highlight gaps, but they do not directly test architecture outcomes in controlled conditions. Repository-based empirical studies such as [3], [6], [7], and [11] provide scalable, tool-supported measurement, yet often produce association evidence due to limited control of confounding variables. Case study and search-based remodularisation research such as [12] provides detailed, realistic evaluation but can be difficult to generalise.
+Across the reviewed studies, a consistent emphasis on measurable evidence is visible, but three methodological families emerge, with differences in how strongly they support causal conclusions. Evidence synthesis work such as \cite{b1} provides structured overviews and highlights gaps, but does not directly test architecture outcomes in controlled conditions. Repository-based empirical studies such as \cite{b3} and \cite{b6} provide scalable, tool-supported measurement, yet often produce association evidence due to limited control of confounding variables. Metric-based and case-study research such as \cite{b4} and \cite{b7} provides detailed and practical evaluation, but can be difficult to generalise across systems.
 
 These differences matter for the present research because they justify a controlled comparative benchmarking design. By holding requirements, dataset ingestion rules, schema, API behaviour, and test procedures constant, stronger internal validity can be achieved than in observational mining studies, while still producing practical evidence relevant to real backend development.
 
-
-\begin{table}[H]
+\begin{table}
 \caption{Comparative Overview of Studies}
 \label{tab1}
 \centering
@@ -124,28 +110,25 @@ These differences matter for the present research because they justify a control
 \hline
 \textbf{Study} & \textbf{\textit{Focus}} & \textbf{\textit{Strategy \& Time Horizon}} & \textbf{\textit{Evidence Type}} \\
 \hline
-[1] & Smell detection research landscape & Systematic mapping, cross-sectional & Academic synthesis \\
+\cite{b1} & Smell detection research landscape & Systematic mapping, cross-sectional & Academic synthesis \\
 \hline
-[3] & Smells and maintainability relation & Empirical study, cross-sectional (observational) & Repository / code metrics \\
+\cite{b2} & Remodularisation effort estimation & Conference companion, cross-sectional & Early-stage academic evidence \\
 \hline
-[6] & Smell evolution patterns & Empirical study, multi-version measurement & Repository / release metrics \\
+\cite{b3} & Co-change and smells & Empirical study, version history mining & Co-change (evolution) metrics \\
 \hline
-[7] & Co-change and smells & Empirical study, version history mining & Co-change (evolution) metrics \\
+\cite{b4} & Modularity measurement (M-score) & Empirical metric derivation and evaluation & Modularity metric validation \\
 \hline
-[8] & Modularity measurement (M-score) & Empirical metric derivation and evaluation & Modularity metric validation \\
+\cite{b5} & Modular monolith trend & Workshop review / conceptual discussion, cross-sectional & Academic positioning \\
 \hline
-[9] & Modular monolith in cloud & Systematic literature review, cross-sectional & Academic synthesis \\
+\cite{b6} & Smells and static warnings & Empirical study, cross-sectional & Smell detection + static analysis outputs \\
 \hline
-[11] & Smells and static warnings & Empirical study, cross-sectional & Smell detection + static analysis outputs \\
-\hline
-[12] & Search-based remodularisation & Industrial case study, cross-sectional & Applied evaluation (industrial evidence) \\
+\cite{b7} & Search-based remodularisation & Industrial case study, cross-sectional & Applied evaluation (industrial evidence) \\
 \hline
 \end{tabularx}
 }
 \end{table}
 
-
-\begin{table}[H]
+\begin{table}
 \caption{Research Design and Evaluation Tools}
 \label{tab2}
 \centering
@@ -154,135 +137,62 @@ These differences matter for the present research because they justify a control
 \hline
 \textbf{Study} & \textbf{\textit{Research Design}} & \textbf{\textit{Data Collection}} & \textbf{\textit{Evaluation Tools / Measures}} \\
 \hline
-[1] & Secondary research (mapping) & Study selection and classification & Taxonomies of methods, tool support, evaluation approaches \\
+\cite{b1} & Secondary research (mapping) & Study selection and classification & Taxonomies of methods, tool support, evaluation approaches \\
 \hline
-[3] & Quantitative empirical (observational) & Smell detection + maintainability-related measures & Statistical analysis linking smell presence to maintainability evidence \\
+\cite{b2} & Short conference companion paper & Conceptual framing of effort estimation for remodularisation & Effort estimation framing for clustering-based remodularisation \\
 \hline
-[6] & Quantitative empirical (multi-version) & Smell detection across releases & Trend, persistence, and evolution analysis across versions \\
+\cite{b3} & Quantitative empirical & Version history mining & Co-change analysis examined in relation to architectural smells \\
 \hline
-[7] & Quantitative empirical & Version history mining & Co-change analysis examined in relation to architectural smells \\
+\cite{b4} & Quantitative metric study & Software structural data & M-score computation, modularity scoring, and metric evaluation \\
 \hline
-[8] & Quantitative metric study & Software structural data & M-score computation, modularity scoring, and metric evaluation \\
+\cite{b5} & Conceptual / workshop-based review & Selected academic and grey literature discussion & Definitions, trends, and architectural positioning \\
 \hline
-[9] & Secondary research (SLR) & Study selection and synthesis & Comparison of definitions, evaluation practices, and research gaps \\
+\cite{b6} & Quantitative empirical (triangulation) & Smell detection + static analysis warnings & Correlation between smell indicators and static analysis warnings \\
 \hline
-[11] & Quantitative empirical (triangulation) & Smell detection + static analysis warnings & Correlation / triangulation between smell indicators and static analysis warnings \\
-\hline
-[12] & Industrial case study & System data from a real organisation & Search-based remodularisation outcomes; structural improvement evidence \\
+\cite{b7} & Industrial case study & System data from a real organisation & Search-based remodularisation outcomes; structural improvement evidence \\
 \hline
 \end{tabularx}
 }
 \end{table}
 
-
 \section{Research Methodologies}
-This study aims to evaluate whether a modular or layered backend architecture improves maintainability and testability compared to a monolithic backend when both implementations deliver identical application behaviour under controlled conditions. The study is applied because it produces two working software artefacts and evaluates them using objective evidence collected through automated tests, tooling, and repeated benchmark runs. The methodological choices are informed by prior architecture-quality research, which commonly uses tool-supported measurement and repository-based evidence to reason about maintainability, smells, modularity, and change impact [1], [3], [6], [7], [8], [11].
+This study evaluates whether a modular or layered backend architecture improves maintainability and testability compared to a monolithic backend when both implementations deliver identical application behaviour under controlled conditions. The study is applied because it produces two working software artefacts and evaluates them using objective evidence collected through automated tests, tooling, and repeated benchmark runs. The methodological choices reflect common approaches in architecture quality research, which often rely on tool supported measurement and empirical evidence to reason about maintainability, modularity, and change impact \cite{b1}, \cite{b3}, \cite{b4}, \cite{b6}, \cite{b7}.
 
 Based on this aim, the following research questions were formed:
 
 \hfill \break
 \textbf{RQ1:} To what extent does a modular or layered backend architecture improve maintainability compared to a monolithic backend when implementing the same requirements?
 \hfill \break
-% \hfill \break
 \textbf{RQ2:} To what extent does a modular or layered backend architecture improve testability compared to a monolithic backend under the same test suite and contract?
 \hfill \break
-% \hfill \break
 \textbf{RQ3:} How does architecture type affect operational performance for dataset ingestion and API responsiveness under the same environment and workload?
 \hfill \break
-% \hfill \break
 \textbf{RQ4:} How does architecture type affect change impact when implementing a controlled change request on the same codebase features?
 \hfill \break
 
-To answer these research questions, the following objectives were constructed:
-\begin{itemize}
-\item Implement two backend versions of the same case tracking application with identical features, API contract, database schema, and dataset ingestion behaviour.
-\item Apply fairness controls by using the same dataset format and rules, the same migrations, the same environment and CI configuration, and the same shared integration tests.
-\item Collect maintainability and structure evidence using tool-based metrics aligned with modularity and architectural quality research, including modularity and smell-related indicators where applicable [1], [3], [6], [8], [11].
-\item Collect testability evidence using test coverage, test stability, and test execution outcomes under the same test suite and assertions.
-\item Collect operational performance evidence through repeated ingestion runs and repeated API benchmark runs under the same conditions, including error counts and timing measures, informed by quality concerns in data pipelines [5].
-\item Execute a controlled change request in both versions and compare change impact using measurable proxies (files touched, lines changed, and affected modules), grounded in evolution and co-change considerations [6], [7].
-\item Analyse results using descriptive statistics and comparative analysis to determine whether the observed differences support the hypothesis.
-\end{itemize}
-
-
 \subsection{Research Design}
-This study adopts a pragmatist philosophy, as it focuses on evidence-based comparison of two software designs in a realistic development context, with the goal of producing practical conclusions that support architectural decision-making. A deductive approach is employed because the study begins with a predefined hypothesis: a modular or layered backend will be more maintainable and more testable than a monolithic backend. This hypothesis is grounded in existing research linking architectural quality, smells, modularity, and change coupling to maintainability outcomes [2], [3], [6], [7], [8], [11].
-
-A mono-method quantitative design is used, since the hypothesis and research questions can be answered using measurable evidence such as structural indicators, test outcomes, runtime measures, and change impact proxies. The strategy is a controlled software experiment (comparative benchmarking), where two implementations are evaluated under the same conditions to reduce confounding factors. The time horizon is cross-sectional with repeated runs, meaning the comparison is conducted at a defined stage of completion, while performance measures are repeated to reduce noise in runtime results.
-
+A pragmatist philosophy is adopted because the study aims to produce practical conclusions from measurable evidence obtained from implemented systems. A deductive approach is used, as the study tests the predefined hypothesis that a modular or layered backend will be more maintainable and more testable than a monolithic backend, consistent with research linking architecture structure, smells, modularity, and change coupling to maintainability outcomes \cite{b1}, \cite{b3}, \cite{b4}, \cite{b6}, \cite{b7}. The strategy is a controlled software experiment (comparative benchmarking) in which two implementations are evaluated under the same constraints to reduce confounding factors. A mono method quantitative design is used, since the research questions are answered through comparable numerical measures. The time horizon is cross sectional with repeated runs, meaning both systems are evaluated at the same stage of completion while measurements are repeated to reduce runtime variance.
 
 \subsection{Environment and Technologies Used}
-Both backend implementations are developed using FastAPI (Python) with PostgreSQL. The system includes a JSON ingestion pipeline that validates, normalises, deduplicates, and inserts data, while logging import-run summaries. Fairness is maintained by using the same database schema and migrations and by validating identical API behaviour through shared integration tests.
-
-Evaluation is supported through:
-\begin{itemize}
-\item Tool-based structural measurement (e.g., complexity/size indicators and modularity indicators, including M-score where applicable) [8].
-\item Architecture-quality indicators informed by smell research where feasible [1], [3], [6], [11].
-\item Automated unit and integration testing with coverage reporting.
-\item Repeated-run benchmarking for ingestion and API responsiveness, including timing and error reporting.
-\end{itemize}
-
+Both backend implementations use FastAPI (Python) with PostgreSQL. The system includes a dataset ingestion pipeline that validates, normalises, deduplicates, and inserts records, while logging import run summaries. Fairness is maintained through the same database schema and migrations, the same dataset format and rules, and identical API behaviour validated through shared integration tests. Evaluation evidence includes tool based structural measurement (including modularity indicators such as M score where applicable) \cite{b4}, architecture quality indicators informed by smell research \cite{b1}, \cite{b3}, \cite{b6}, and repeatable performance measurement for ingestion and API responsiveness.
 
 \subsection{Experiment Design}
-Two backend artefacts are implemented:
-\begin{itemize}
-\item Architecture A: Monolith - a single backend structure where routing, business rules, and data access are tightly integrated.
-\item Architecture B: Modular - a backend structure where routing, business rules, and data access are separated into distinct modules with well-defined interfaces.
-\end{itemize}
+Two artefacts are implemented: (1) a monolithic backend in which routing, business rules, and data access are tightly integrated, and (2) a modular backend in which routing, business rules, and data access are separated into distinct modules with defined interfaces. Both versions are assessed under the same controls: identical requirements and outputs, identical database schema and migrations, identical dataset ingestion rules, and identical automated test procedures. A controlled change request is applied to both versions to measure change impact using files touched and lines changed, grounded in evolution and co change rationale \cite{b3}, \cite{b7}.
 
-To strengthen internal validity, both versions are evaluated with the following controls:
-\begin{itemize}
-\item Same API contract and outputs (verified using shared integration tests).
-\item Same database schema and migrations.
-\item Same dataset format, validation rules, and ingestion procedure.
-\item Same environment and CI/testing procedures.
-\end{itemize}
-A controlled change request is then implemented in both versions to assess change impact. The change introduces derived analytics (e.g., completion rate for an optional milestone) and summary statistics (e.g., median/percentiles for milestone duration), enabling measurable comparison aligned with evolution and co-change rationale [6], [7].
-
-
-\subsection{Reflections on Validity, Reliability, and Generalisability}
-Internal validity is strengthened through fairness controls, reducing the likelihood that differences are caused by feature drift or environmental variation, which is a common limitation in observational architecture research [3], [6], [11]. Construct validity is supported by using multiple indicators for maintainability and testability, avoiding reliance on a single metric to represent complex software qualities, which aligns with concerns in modularity measurement [8]. Reliability is supported through automation, repeatable measurement pipelines, and repeated performance runs under consistent conditions. Generalisability is limited because the study evaluates one application domain and one technology stack, but transferability is supported by clear documentation of procedures and metrics, consistent with how industrial and case-based evidence is typically contextualised [12].
-
+\subsection{Validity, Reliability, and Generalisability}
+Internal validity is strengthened through fairness controls, reducing the likelihood that differences arise from feature drift or environment variation, which is a common limitation in observational architecture research \cite{b3}, \cite{b6}. Construct validity is supported by triangulating multiple indicators for maintainability and testability rather than relying on a single metric, consistent with concerns in modularity measurement \cite{b4}. Reliability is supported through automation and repeated benchmark runs. Generalisability is limited to the chosen application and stack, but transferability is supported by clearly defined procedures and reporting, consistent with how industrial and case based evidence is typically contextualised \cite{b7}.
 
 \subsection{Ethical Considerations}
-This study does not involve human participants. The dataset is synthetic, reducing the risk of handling personal or sensitive data. Ethical considerations primarily relate to research integrity: methodology, controls, and limitations will be reported transparently, and tool limitations will be acknowledged to avoid overstating conclusions [1], [8]. Results will be presented objectively, including outcomes that do not support the hypothesis.
+This study does not involve human participants. The dataset is synthetic, reducing the risk of handling personal or sensitive data. The study reports methods, controls, and limitations transparently, and acknowledges tool limitations to avoid overstating conclusions \cite{b1}, \cite{b4}.
 
-
-
-% \subsection{Equations}
-% Number equations consecutively. To make your 
-% equations more compact, you may use the solidus (~/~), the exp function, or 
-% appropriate exponents. Italicize Roman symbols for quantities and variables, 
-% but not Greek symbols. Use a long dash rather than a hyphen for a minus 
-% sign. Punctuate equations with commas or periods when they are part of a 
-% sentence, as in:
-% \begin{equation}
-% a+b=\gamma\label{eq}
-% \end{equation}
-
-% Be sure that the 
-% symbols in your equation have been defined before or immediately following 
-% the equation. Use ``\eqref{eq}'', not ``Eq.~\eqref{eq}'' or ``equation \eqref{eq}'', except at 
-% the beginning of a sentence: ``Equation \eqref{eq} is . . .''
-
-
-\vspace{12pt}
 \begin{thebibliography}{00}
 \bibitem{b1} H. Mumtaz, P. Singh, and K. Blincoe, “A Systematic Mapping Study on Architectural Smells Detection,” Journal of Systems and Software, vol. 173, Art. no. 110885, 2021, doi: 10.1016/j.jss.2020.110885.
-\bibitem{b2} P. Rachow and M. Riebisch, “An Architecture Smell Knowledge Base for Managing Architecture Technical Debt,” in Proc. IEEE/ACM Int. Conf. on Technical Debt (TechDebt), pp. 1–10, 2022, doi: 10.1145/3524843.3528092.
-\bibitem{b3} R. Jolak, S. Karlsson, and F. Dobslaw, “An Empirical Investigation of the Impact of Architectural Smells on Software Maintainability,” Journal of Systems and Software, vol. 225, Art. no. 112382, 2025, doi: 10.1016/j.jss.2025.112382.
-\bibitem{b4} A. J. J. Tan, C. Y. Chong, and A. Aleti, “Closing the Loop for Software Remodularisation: REARRANGE, An Effort Estimation Approach for Software Clustering Based Remodularisation,” in Companion Proc. IEEE/ACM Int. Conf. on Software Engineering (ICSE-Companion), 2023, pp. 326–327, doi: 10.1109/ICSE-Companion58688.2023.00090.
-\bibitem{b5} H. Foidl, V. Golendukhina, R. Ramler, and M. Felderer, “Data pipeline quality: Influencing factors, root causes of data related issues, and processing problem areas for developers,” Journal of Systems and Software, vol. 207, Art. no. 111855, Jan. 2024, doi: 10.1016/j.jss.2023.111855.
-\bibitem{b6} P. Gnoyke, S. Schulze, and J. Krüger, “Evolution Patterns of Software-Architecture Smells: An Empirical Study of Intra- and Inter-Version Smells,” Journal of Systems and Software, vol. 217, Art. no. 112170, 2024, doi: 10.1016/j.jss.2024.112170.
-\bibitem{b7} D. Sas, P. Avgeriou, R. Kruizinga, and R. Scheedler, “Exploring the Relation Between Co-changes and Architectural Smells,” SN Computer Science, 2021, doi: 10.1007/s42979-020-00407-5.
-\bibitem{b8} E. Pisch, Y. Cai, R. Kazman, J. Lefever, and H. Fang, “M-score: An Empirically Derived Software Modularity Metric,” in Proc. ACM/IEEE Int. Symp. on Empirical Software Engineering and Measurement (ESEM), pp. 382–392, 2024, doi: 10.1145/3674805.3686697.
-\bibitem{b9} L. F. Al-Qora’n and A. Al-Said Ahmad, “Modular Monolith Architecture in Cloud Environments: A Systematic Literature Review,” Future Internet, vol. 17, no. 11, Art. no. 496, 2025, doi: 10.3390/fi17110496.
-\bibitem{b10} R. Su and X. Li, “Modular Monolith: Is This the Trend in Software Architecture?,” in Proc. 1st Int. Workshop on New Trends in Software Architecture (SATrends ’24), 2024, doi: 10.1145/3643657.3643911.
-\bibitem{b11} M. Esposito, M. Robredo, F. Arcelli Fontana, and V. Lenarduzzi, “On the Correlation Between Architectural Smells and Static Analysis Warnings,” Software Quality Journal, 2025, doi: 10.1007/s11219-025-09730-7.
-\bibitem{b12} C. Schröder, A. van der Feltz, A. Panichella, and M. Aniche, “Search Based Software Re Modularization: A Case Study at Adyen,” in Proc. IEEE/ACM 43rd Int. Conf. on Software Engineering: Software Engineering in Practice (ICSE-SEIP), 2021, pp. 81–90, doi: 10.1109/ICSE-SEIP52600.2021.00017.
+\bibitem{b2} A. J. J. Tan, C. Y. Chong, and A. Aleti, “Closing the Loop for Software Remodularisation: REARRANGE, An Effort Estimation Approach for Software Clustering Based Remodularisation,” in Companion Proc. IEEE/ACM Int. Conf. on Software Engineering (ICSE-Companion), 2023, pp. 326–327, doi: 10.1109/ICSE-Companion58688.2023.00090.
+\bibitem{b3} D. Sas, P. Avgeriou, R. Kruizinga, and R. Scheedler, “Exploring the Relation Between Co-changes and Architectural Smells,” SN Computer Science, 2021, doi: 10.1007/s42979-020-00407-5.
+\bibitem{b4} E. Pisch, Y. Cai, R. Kazman, J. Lefever, and H. Fang, “M-score: An Empirically Derived Software Modularity Metric,” in Proc. ACM/IEEE Int. Symp. on Empirical Software Engineering and Measurement (ESEM), pp. 382–392, 2024, doi: 10.1145/3674805.3686697.
+\bibitem{b5} R. Su and X. Li, “Modular Monolith: Is This the Trend in Software Architecture?,” in Proc. 1st Int. Workshop on New Trends in Software Architecture (SATrends ’24), 2024, doi: 10.1145/3643657.3643911.
+\bibitem{b6} M. Esposito, M. Robredo, F. Arcelli Fontana, and V. Lenarduzzi, “On the Correlation Between Architectural Smells and Static Analysis Warnings,” Software Quality Journal, 2025, doi: 10.1007/s11219-025-09730-7.
+\bibitem{b7} C. Schröder, A. van der Feltz, A. Panichella, and M. Aniche, “Search Based Software Re Modularization: A Case Study at Adyen,” in Proc. IEEE/ACM 43rd Int. Conf. on Software Engineering: Software Engineering in Practice (ICSE-SEIP), 2021, pp. 81–90, doi: 10.1109/ICSE-SEIP52600.2021.00017.
 \end{thebibliography}
-% \vspace{12pt}
-% \color{red}
-% IEEE conference templates contain guidance text for composing and formatting conference papers. Please ensure that all template text is removed from your conference paper prior to submission to the conference. Failure to remove the template text from your paper may result in your paper not being published.
 
 \end{document}
