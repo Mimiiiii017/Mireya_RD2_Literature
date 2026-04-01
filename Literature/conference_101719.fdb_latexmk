@@ -1,8 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1774661118.62565 "c:/Users/mirey/Documents/Github/Mireya_RD2_Literature/Literature/conference_101719.tex" "conference_101719.pdf" "conference_101719" 1774661120.28747 0
+["pdflatex"] 1775076427.23371 "c:/Users/mirey/Documents/Github/Mireya_RD2_Literature/Literature/conference_101719.tex" "conference_101719.pdf" "conference_101719" 1775076428.38233 0
+  "../Images/litmaprd2.png" 1775069984 528077 25d66852c16f3f661a24a668e83bd8f4 ""
   "../Images/reson.png" 1772703956 226716 6b793da076c9a99a5eef498bcd3def71 ""
   "IEEEtran.cls" 1771614476 281957 5b2e4fa15b0f7eabb840ebf67df4c0f7 ""
-  "c:/Users/mirey/Documents/Github/Mireya_RD2_Literature/Literature/conference_101719.tex" 1774661115 22045 d9d13b763d9d50921c4b81aad3fd52fe ""
+  "c:/Users/mirey/Documents/Github/Mireya_RD2_Literature/Literature/conference_101719.tex" 1775076426 22029 9feb7566d1d87f0e324be6acf6bf9ef9 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1771599475 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1771600807 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1771610255 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -71,8 +72,8 @@
   "c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1771612149 5587484 49bd08ff372a6985d7d70778694ddaac ""
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1771612371 3636145 0fd747be69b52319c9dae5c106feaa6f ""
   "c:/texlive/2025/texmf.cnf" 1771612125 713 e69b156964470283e0530f5060668171 ""
-  "conference_101719.aux" 1774661120 3579 49d5e1e55ba37c18507c7876b9a2decc "pdflatex"
-  "conference_101719.tex" 1774661115 22045 d9d13b763d9d50921c4b81aad3fd52fe ""
+  "conference_101719.aux" 1775076428 3752 b3bd5d4c6267d0e19923b06b1decf366 "pdflatex"
+  "conference_101719.tex" 1775076426 22029 9feb7566d1d87f0e324be6acf6bf9ef9 ""
   (generated)
   "conference_101719.aux"
   "conference_101719.log"

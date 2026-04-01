@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.2.20)  27 MAR 2026 20:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.2.20)  1 APR 2026 15:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -312,17 +312,16 @@ Package pdftex.def Info: ../Images/reson.png  used on input line 55.
  [1{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
- <../Images/reson.png>] [2]
-Underfull \hbox (badness 7649) in paragraph at lines 163--172
-\OT1/ptm/b/n/10 RQ3: \OT1/ptm/m/n/10 How does ar-chi-tec-ture type af-fect op-er-a-tional
- []
+ <../Images/reson.png>]
+<../Images/litmaprd2.png, id=13, 2531.4575pt x 982.67125pt>
+File: ../Images/litmaprd2.png Graphic file (type png)
+<use ../Images/litmaprd2.png>
+Package pdftex.def Info: ../Images/litmaprd2.png  used on input line 74.
+(pdftex.def)             Requested size: 516.0pt x 200.29434pt.
+ [2]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--172
-
- []
-
-[3]
+ [3 <../Images/litmaprd2.png>]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -341,18 +340,18 @@ L3 programming layer <2026-01-19>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4403 strings out of 467533
- 68087 string characters out of 5423668
- 502995 words of memory out of 5000000
- 33264 multiletter control sequences out of 15000+600000
+ 4413 strings out of 467533
+ 68374 string characters out of 5423668
+ 497017 words of memory out of 5000000
+ 33274 multiletter control sequences out of 15000+600000
  669219 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,10n,65p,1102b,375s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on conference_101719.pdf (4 pages, 231285 bytes).
+Output written on conference_101719.pdf (4 pages, 703828 bytes).
 PDF statistics:
- 41 PDF objects out of 1000 (max. 8388607)
+ 43 PDF objects out of 1000 (max. 8388607)
  24 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

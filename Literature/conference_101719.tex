@@ -68,18 +68,20 @@ This study tests the hypothesis that a modular or layered architecture is more m
 The purpose of this controlled comparative experiment will be to test the theory that architectural modularity improves software quality by relating backend architecture type to maintainability and testability outcomes, while controlling for identical requirements, dataset, database schema, API contract, test suite, and runtime environment across both implementations. The independent variable will be backend architecture type, defined as a monolithic backend or a modular or layered backend. The dependent variables will be maintainability and testability, defined using tool-based structural measures and automated test evidence.
 
 \section{Literature Review}
+
+\begin{figure*}[htbp]
+\centering
+\includegraphics[width=\textwidth]{../Images/litmaprd2.png}
+\caption{Literature Map}
+\label{fig:literature-map}
+\end{figure*}
+
 This section reviews the methodologies adopted in recent studies related to software architecture quality and modularity, with a focus on how researchers evaluate architectural smells, maintainability, modularity, and remodularisation. To provide a structured and comparative lens, this review follows the logic of the research onion by considering research philosophy, methodological approach, strategy, time horizon, and evaluation procedures used to validate architecture-related hypotheses \cite{b1}, \cite{b5}.
 
 Across the reviewed works, a largely positivist stance is evident, prioritising objective and measurable outcomes derived from software artefacts such as source code, repository history, and static analysis outputs \cite{b1}, \cite{b3}, \cite{b6}. Most studies follow a deductive approach by testing expectations such as whether architectural smells are associated with change behaviour, whether modularity can be captured through stronger quantitative metrics, or whether restructuring can improve software quality \cite{b3}, \cite{b4}, \cite{b6}, \cite{b7}. The dominant strategies are empirical mining studies and tool-supported analyses, complemented by evidence synthesis through mapping studies and workshop-based reviews \cite{b1}, \cite{b5}. Time horizons are commonly cross-sectional (single snapshot of systems) or version-based (repeated measures across releases) depending on the study design \cite{b3}.
 
-All sources included in this review are academic publications, including peer-reviewed journal articles, conference papers, and workshop papers \cite{b1}--\cite{b7}. Non-academic sources such as vendor documentation, architecture blogs, and practitioner case posts can support implementation decisions, but they are not treated as primary evidence here because they often do not report controlled variables, reproducible methods, or peer-reviewed evaluation.
+All sources included in this review are academic publications, including peer-reviewed journal articles, conference papers, and workshop papers \cite{b1,b2,b3,b4,b5,b6,b7}. Non-academic sources such as vendor documentation, architecture blogs, and practitioner case posts can support implementation decisions, but they are not treated as primary evidence here because they often do not report controlled variables, reproducible methods, or peer-reviewed evaluation.
 
-% \begin{figure}[htbp]
-% \centering
-% \includegraphics[width=0.75\columnwidth]{../Images/LitMap.png}
-% \caption{Literature Map}
-% \label{fig:literature-map}
-% \end{figure}
 
 \subsection{Methodologies of Similar Studies}
 \cite{b1} conducts a systematic mapping study on architectural smell detection. The methodology applies structured search and selection procedures, then categorises studies by detection approaches, data sources, tool support, and validation methods. This is strong for breadth and transparency, and it supports positioning by showing that detection practices are diverse and not fully standardised. However, mapping studies do not directly test outcomes such as improved maintainability, so they contribute classification and gap identification rather than causal evidence.
@@ -168,7 +170,6 @@ Based on this aim, the following research questions were formed:
 \textbf{RQ3:} How does architecture type affect operational performance for dataset ingestion and API responsiveness under the same environment and workload?
 \hfill \break
 \textbf{RQ4:} How does architecture type affect change impact when implementing a controlled change request on the same codebase features?
-\hfill \break
 
 \subsection{Research Design}
 A pragmatist philosophy is adopted because the study aims to produce practical conclusions from measurable evidence obtained from implemented systems. A deductive approach is used, as the study tests the predefined hypothesis that a modular or layered backend will be more maintainable and more testable than a monolithic backend, consistent with research linking architecture structure, smells, modularity, and change coupling to maintainability outcomes \cite{b1}, \cite{b3}, \cite{b4}, \cite{b6}, \cite{b7}. The strategy is a controlled software experiment (comparative benchmarking) in which two implementations are evaluated under the same constraints to reduce confounding factors. A mono method quantitative design is used, since the research questions are answered through comparable numerical measures. The time horizon is cross sectional with repeated runs, meaning both systems are evaluated at the same stage of completion while measurements are repeated to reduce runtime variance.
@@ -192,7 +193,7 @@ This study does not involve human participants. The dataset is synthetic, reduci
 \bibitem{b4} E. Pisch, Y. Cai, R. Kazman, J. Lefever, and H. Fang, “M-score: An Empirically Derived Software Modularity Metric,” in Proc. ACM/IEEE Int. Symp. on Empirical Software Engineering and Measurement (ESEM), pp. 382–392, 2024, doi: 10.1145/3674805.3686697.
 \bibitem{b5} R. Su and X. Li, “Modular Monolith: Is This the Trend in Software Architecture?,” in Proc. 1st Int. Workshop on New Trends in Software Architecture (SATrends ’24), 2024, doi: 10.1145/3643657.3643911.
 \bibitem{b6} M. Esposito, M. Robredo, F. Arcelli Fontana, and V. Lenarduzzi, “On the Correlation Between Architectural Smells and Static Analysis Warnings,” Software Quality Journal, 2025, doi: 10.1007/s11219-025-09730-7.
-\bibitem{b7} C. Schröder, A. van der Feltz, A. Panichella, and M. Aniche, “Search Based Software Re Modularization: A Case Study at Adyen,” in Proc. IEEE/ACM 43rd Int. Conf. on Software Engineering: Software Engineering in Practice (ICSE-SEIP), 2021, pp. 81–90, doi: 10.1109/ICSE-SEIP52600.2021.00017.
+\bibitem{b7} C. Schr\"oder, A. van der Feltz, A. Panichella, and M. Aniche, “Search Based Software Re Modularization: A Case Study at Adyen,” in Proc. IEEE/ACM 43rd Int. Conf. on Software Engineering: Software Engineering in Practice (ICSE-SEIP), 2021, pp. 81–90, doi: 10.1109/ICSE-SEIP52600.2021.00017.
 \end{thebibliography}
 
 \end{document}

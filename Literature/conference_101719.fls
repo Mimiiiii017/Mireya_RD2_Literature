@@ -162,6 +162,11 @@ INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/vf/adobe/times/ptmrc7t.vf
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
+INPUT ../Images/litmaprd2.png
+INPUT ../Images/litmaprd2.png
+INPUT ../Images/litmaprd2.png
+INPUT ../Images/litmaprd2.png
+INPUT ../Images/litmaprd2.png
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/adobe/times/ptmrc7t.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
