@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.2.20)  15 APR 2026 11:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.2.20)  24 APR 2026 10:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -319,11 +319,10 @@ File: ../Images/litmaprd2.png Graphic file (type png)
 Package pdftex.def Info: ../Images/litmaprd2.png  used on input line 74.
 (pdftex.def)             Requested size: 516.0pt x 200.29434pt.
  [2] [3 <../Images/litmaprd2.png>]
-Underfull \hbox (badness 1383) in paragraph at lines 179--180
-\OT1/ptm/m/n/10 the re-search ques-tions are an-swered ex-clu-sively through
- []
-
-[4]
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 184.
+ (c:/texlive/2025/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+) [4]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -335,27 +334,25 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[5
-
-] (./conference_101719.aux)
+[5] (./conference_101719.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4413 strings out of 467533
- 68374 string characters out of 5423668
- 498017 words of memory out of 5000000
- 33274 multiletter control sequences out of 15000+600000
- 669219 words of font info for 114 fonts, out of 8000000 for 9000
+ 4452 strings out of 467533
+ 68937 string characters out of 5423668
+ 497017 words of memory out of 5000000
+ 33308 multiletter control sequences out of 15000+600000
+ 669734 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,10n,65p,1047b,375s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on conference_101719.pdf (5 pages, 705785 bytes).
+ 57i,10n,65p,1232b,375s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on conference_101719.pdf (5 pages, 717338 bytes).
 PDF statistics:
- 46 PDF objects out of 1000 (max. 8388607)
- 26 compressed objects within 1 object stream
+ 51 PDF objects out of 1000 (max. 8388607)
+ 29 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
