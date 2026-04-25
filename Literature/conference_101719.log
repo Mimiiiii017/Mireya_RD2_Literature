@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.2.20)  24 APR 2026 10:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2026.2.20)  25 APR 2026 21:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -296,20 +296,16 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (c:/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 34.
- (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 34.
- (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
+Underfull \hbox (badness 1609) in paragraph at lines 37--39
+[]\OT1/ptm/b/it/9 Index Terms\OT1/ptm/b/n/9 ---software ar-chi-tec-ture, mono-lithic, mod-u-lar,
+ []
+
 <../Images/reson.png, id=1, 2046.64626pt x 1094.0875pt>
 File: ../Images/reson.png Graphic file (type png)
 <use ../Images/reson.png>
-Package pdftex.def Info: ../Images/reson.png  used on input line 55.
+Package pdftex.def Info: ../Images/reson.png  used on input line 54.
 (pdftex.def)             Requested size: 189.0pt x 101.03456pt.
- [1{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}
+[1{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
  <../Images/reson.png>]
@@ -318,11 +314,33 @@ File: ../Images/litmaprd2.png Graphic file (type png)
 <use ../Images/litmaprd2.png>
 Package pdftex.def Info: ../Images/litmaprd2.png  used on input line 74.
 (pdftex.def)             Requested size: 516.0pt x 200.29434pt.
- [2] [3 <../Images/litmaprd2.png>]
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 184.
+ [2] (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd) (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd) [3 <../Images/litmaprd2.png>]
+Underfull \vbox (badness 8132) has occurred while \output is active []
+
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 186.
  (c:/texlive/2025/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 ) [4]
+Underfull \hbox (badness 6758) in paragraph at lines 263--264
+[]\OT1/ptm/m/n/10 Both suites pro-duced 13 dep-re-ca-tion warn-ings for
+ []
+
+<../Images/cc_comparison.png, id=25, 498.30165pt x 295.5843pt>
+File: ../Images/cc_comparison.png Graphic file (type png)
+<use ../Images/cc_comparison.png>
+Package pdftex.def Info: ../Images/cc_comparison.png  used on input line 267.
+(pdftex.def)             Requested size: 252.0pt x 149.48312pt.
+[5 <../Images/cc_comparison.png>]
+Overfull \hbox (8.33327pt too wide) in paragraph at lines 318--318
+[]|\OT1/pcr/m/n/7 repo_cases.execute_ 
+ []
+
+<../Images/change_impact.png, id=30, 498.30165pt x 235.23885pt>
+File: ../Images/change_impact.png Graphic file (type png)
+<use ../Images/change_impact.png>
+Package pdftex.def Info: ../Images/change_impact.png  used on input line 376.
+(pdftex.def)             Requested size: 252.0pt x 118.96516pt.
+[6 <../Images/change_impact.png>]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -334,25 +352,25 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[5] (./conference_101719.aux)
+[7] (./conference_101719.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4452 strings out of 467533
- 68937 string characters out of 5423668
- 497017 words of memory out of 5000000
- 33308 multiletter control sequences out of 15000+600000
- 669734 words of font info for 116 fonts, out of 8000000 for 9000
+ 4455 strings out of 467533
+ 69305 string characters out of 5423668
+ 501196 words of memory out of 5000000
+ 33320 multiletter control sequences out of 15000+600000
+ 665521 words of font info for 104 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,10n,65p,1232b,375s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,10n,65p,1722b,375s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on conference_101719.pdf (5 pages, 717338 bytes).
+Output written on conference_101719.pdf (7 pages, 828027 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
- 29 compressed objects within 1 object stream
+ 63 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -31,13 +31,11 @@ mireya.vella.i85114@mcast.edu.mt}
 \maketitle
 
 \begin{abstract}
-This document is a model and instructions for \LaTeX.
-This and the IEEEtran.cls file define the components of your paper [title, text, heads, etc.]. *CRITICAL: Do Not Use Symbols, Special Characters, Footnotes, 
-or Math in Paper Title or Abstract.
+This study compares monolithic and modular backend architectures using two functionally equivalent FastAPI implementations of a case-tracking application. Maintainability was assessed through lines of code distribution and cyclomatic complexity analysis, testability through a shared 29-test API contract suite and mock injection precision, and change impact through two controlled modification scenarios. The modular architecture achieved a 42 per cent reduction in average cyclomatic complexity and enabled layer-boundary-accurate test isolation, whilst both implementations passed all 29 tests. The findings support the hypothesis that a modular architecture is more maintainable and testable than a monolithic architecture.
 \end{abstract}
 
 \begin{IEEEkeywords}
-component, formatting, style, styling, insert
+software architecture, monolithic, modular, maintainability, testability, cyclomatic complexity
 \end{IEEEkeywords}
 
 \section{Introduction}
@@ -49,6 +47,7 @@ This study focuses on a dataset-driven case-tracking application in order to com
 
 \subsection{Positioning and Research Onion}
 This study adopts a pragmatist philosophy because it aims to develop and evaluate a working software artefact and to draw conclusions from practical, measurable evidence. This position is appropriate because the outcome is assessed using objective metrics collected from the implemented systems rather than the researcher’s personal opinion. The study follows a deductive approach, as it seeks to test the predefined hypothesis that a modular or layered architecture provides better maintainability and testability than a monolithic design.
+
 
 \begin{figure}[htbp]
 \centering
@@ -65,9 +64,10 @@ Architectural quality is closely related to maintainability, and architectural s
 \subsection{Hypothesis, Research Aim, and Purpose Statement}
 This study tests the hypothesis that a modular or layered architecture is more maintainable and testable than a monolithic architecture.
 
-The purpose of this controlled comparative experiment will be to test the theory that architectural modularity improves software quality by relating backend architecture type to maintainability and testability outcomes, while controlling for identical requirements, dataset, database schema, API contract, test suite, and runtime environment across both implementations. The independent variable will be backend architecture type, defined as a monolithic backend or a modular or layered backend. The dependent variables will be maintainability and testability, defined using tool-based structural measures and automated test evidence.
+The purpose of this controlled comparative experiment was to test the theory that architectural modularity improves software quality by relating backend architecture type to maintainability and testability outcomes, while controlling for identical requirements, dataset, database schema, API contract, test suite, and runtime environment across both implementations. The independent variable was backend architecture type, defined as a monolithic backend or a modular or layered backend. The dependent variables were maintainability and testability, defined using tool-based structural measures and automated test evidence.
 
 \section{Literature Review}
+
 
 \begin{figure*}[htbp]
 \centering
@@ -84,24 +84,25 @@ All sources reviewed were academic publications, including peer-reviewed journal
 
 
 \subsection{Methodologies of Similar Studies}
-\cite{b1} conducted a systematic mapping study on architectural smell detection. The methodology applied structured search and selection procedures, then categorised studies by detection approaches, data sources, tool support, and validation methods. This was strong for breadth and transparency, and it supported positioning by showing that detection practices were diverse and not fully standardised. However, mapping studies did not directly test outcomes such as improved maintainability, so they contributed classification and gap identification rather than causal evidence.
+Mumtaz et al.\ \cite{b1} conducted a systematic mapping study on architectural smell detection. The methodology applied structured search and selection procedures, then categorised studies by detection approaches, data sources, tool support, and validation methods. This was strong for breadth and transparency, and it supported positioning by showing that detection practices were diverse and not fully standardised. However, mapping studies did not directly test outcomes such as improved maintainability, so they contributed classification and gap identification rather than causal evidence.
 
-\cite{b3} explored the relation between co-changes and architectural smells through repository mining. Co-change behaviour was used as a proxy for coupling and change propagation, then analysed alongside smell presence. The strength was that it was grounded in real maintenance activity. The limitation was that commit granularity and workflow conventions could distort co-change patterns, which could threaten internal validity if not carefully controlled.
+Sas et al.\ \cite{b3} explored the relation between co-changes and architectural smells through repository mining. Co-change behaviour was used as a proxy for coupling and change propagation, then analysed alongside smell presence. The strength was that it was grounded in real maintenance activity. The limitation was that commit granularity and workflow conventions could distort co-change patterns, which could threaten internal validity if not carefully controlled.
 
-\cite{b4} proposed M-score as an empirically derived modularity metric. The methodology focused on improving measurement quality, which was important because modularity was often used as a dependent variable in architecture evaluation. Stronger metrics supported clearer comparison across systems. A limitation was that modularity is multi-dimensional, so M-score should be interpreted alongside complementary indicators such as complexity, test outcomes, and change impact.
+Pisch et al.\ \cite{b4} proposed M-score as an empirically derived modularity metric. The methodology focused on improving measurement quality, which was important because modularity was often used as a dependent variable in architecture evaluation. Stronger metrics supported clearer comparison across systems. A limitation was that modularity is multi-dimensional, so M-score should be interpreted alongside complementary indicators such as complexity, test outcomes, and change impact.
 
-\cite{b6} investigated correlations between architectural smells and static analysis warnings. Methodologically, this triangulated architecture-level detection with another measurement source (static analysis), which could improve construct validity by showing alignment between different quality signals. However, correlations required careful interpretation because static warnings varied in severity and did not uniformly reflect architectural structure.
+Esposito et al.\ \cite{b6} investigated correlations between architectural smells and static analysis warnings. Methodologically, this triangulated architecture-level detection with another measurement source (static analysis), which could improve construct validity by showing alignment between different quality signals. However, correlations required careful interpretation because static warnings varied in severity and did not uniformly reflect architectural structure.
 
-\cite{b7} presented a search-based remodularisation case study at Adyen. Case study methodology supported practical relevance by evaluating restructuring in a realistic industrial setting. This provided strong context and feasibility evidence, but generalisability was reduced because results could depend on the organisation, codebase constraints, and local engineering practices.
+Schr\"oder et al.\ \cite{b7} presented a search-based remodularisation case study at Adyen. Case study methodology supported practical relevance by evaluating restructuring in a realistic industrial setting. This provided strong context and feasibility evidence, but generalisability was reduced because results could depend on the organisation, codebase constraints, and local engineering practices.
 
-\cite{b2} proposed an effort estimation approach for clustering-based remodularisation in a conference companion venue. It supported framing restructuring cost and feasibility, but it was lighter empirical evidence compared to full-length journal studies.
+Tan et al.\ \cite{b2} proposed an effort estimation approach for clustering-based remodularisation in a conference companion venue. It supported framing restructuring cost and feasibility, but it was lighter empirical evidence compared to full-length journal studies.
 
-Similarly, \cite{b5} discussed modular monolith as a trend in a workshop context, supporting conceptual positioning rather than providing strong controlled evaluation.
+Similarly, Su and Li \cite{b5} discussed modular monolith as a trend in a workshop context, supporting conceptual positioning rather than providing strong controlled evaluation.
 
 \subsection{Comparisons of Studies}
 Three methodological patterns emerged across the reviewed research, as summarised in Table~\ref{tab1}. Synthesis work such as \cite{b1} delivered structured overviews and identified gaps, but did not directly test architecture outcomes in controlled settings. Repository-based empirical studies like \cite{b3} and \cite{b6} scaled well and used automation, yet often produced association evidence because confounding variables were difficult to control. Metric-based and case study research such as \cite{b4} and \cite{b7} provided detailed, practical evaluation, though generalising findings across different systems and organisations was challenging.
 
 These differences justify the controlled comparative benchmarking approach adopted here. Table~\ref{tab2} further details the research design, data collection methods, and evaluation tools employed across the reviewed studies. By fixing requirements, dataset rules, schema, API behaviour, and test procedures, stronger internal validity can be achieved compared to observational mining studies, whilst still producing evidence relevant to actual backend development practice.
+
 
 \begin{table}
 \caption{Comparative Overview of Studies}
@@ -129,6 +130,7 @@ These differences justify the controlled comparative benchmarking approach adopt
 \end{tabularx}
 }
 \end{table}
+
 
 \begin{table}
 \caption{Research Design and Evaluation Tools}
@@ -183,7 +185,7 @@ Both backend implementations used FastAPI (Python) with PostgreSQL. The system i
 
 The dataset was synthetically generated using a dedicated Python script (\texttt{generate\_data.py}). The script produced 5{,}000 JSON records, each representing a case with seven fields: a unique case number (prefixed \texttt{RD2} followed by a six-digit identifier), service centre, case type (one of five categories), case status (one of nine possible values), a status-derived title, application filed date, and last updated date. Case numbers were guaranteed unique through deduplication at generation time. Filed and updated dates were drawn randomly from the range January 2023 to August 2025, with a business rule enforced such that cases in a \textit{received} status had an updated date equal to their filed date. The random seed was fixed at 42 to ensure reproducibility. The resulting \texttt{cases.json} file was used as the sole input for both backend implementations, ensuring that neither architecture had any advantage in data quality or volume. 
 
-Evaluation evidence was collected using: (1) tool-based structural measurement via Pylint and McCabe complexity analysis, including modularity indicators such as M-score where applicable \cite{b4}; (2) architecture quality indicators informed by smell detection research \cite{b1}, \cite{b3}, \cite{b6}; and (3) repeatable performance measurement for ingestion and API responsiveness. Each benchmark run measured throughput, response latency, and memory consumption; measurements were repeated across 10 independent runs to compute mean values and standard deviation, reducing random variation in runtime results.
+Evaluation evidence was collected using: (1) tool-based structural measurement via the Radon static analysis tool for cyclomatic complexity, including modularity indicators such as M-score where applicable \cite{b4}; (2) architecture quality indicators informed by smell detection research \cite{b1}, \cite{b3}, \cite{b6}; and (3) test-suite execution time as a proxy for framework-level performance overhead under mocked conditions, as live throughput and latency benchmarks were not conducted. Structural measurements were automated to eliminate subjective interpretation.
 
 \subsection{Experiment Design}
 Two artefacts were implemented: (1) a monolithic backend where routing, business rules, and data access were tightly integrated, and (2) a modular backend where routing, business rules, and data access were separated into distinct modules with clearly defined boundaries. This two-implementation structure was inspired by the controlled evaluation approach used in \cite{b7}, where architectural restructuring was assessed by comparing a before-and-after state under consistent conditions, and by \cite{b4}, which evaluated modularity by applying a consistent measurement framework across multiple systems. Both versions were evaluated under identical constraints: the same requirements and outputs, identical database schema and migrations, identical dataset ingestion rules, and an identical automated test suite. Fixing these constraints follows the internal validity principle applied in \cite{b3} and \cite{b6}, where confounding variables were minimised by holding non-architectural factors constant across compared systems.
@@ -195,6 +197,200 @@ Internal validity was strengthened through standardised controls across both imp
 
 \subsection{Ethical Considerations}
 This research did not involve human participants. The dataset employed was synthetically generated, thus eliminating any risk of mishandling personal or sensitive information. The study reported methodological choices, controls, and limitations with transparency, and explicitly acknowledged tool limitations to avoid overstating the scope of conclusions \cite{b1}, \cite{b4}.
+
+\section{Findings \& Discussion of Results}
+
+\subsection*{RQ1: Maintainability}
+
+Maintainability was evaluated through LOC distribution across source files and cyclomatic complexity computed using the Radon static analysis tool \cite{b4}.
+
+Table~\ref{tab3} presents the LOC breakdown. The monolithic implementation placed all routing, validation, business logic, and data access into a single 632-line file. The modular implementation distributed equivalent functionality across six dedicated files totalling 857 lines. The 35.6\% increase reflects the structural overhead of explicit layer boundaries and typed interface definitions, a trade-off consistent with Su and Li \cite{b5}.
+
+
+\begin{table}[H]
+\caption{LOC Distribution by Architecture}
+\label{tab3}
+\centering
+{\scriptsize
+\begin{tabularx}{\columnwidth}{|Y|c|c|}
+\hline
+\textbf{File / Module} & \textbf{Mono} & \textbf{Modular} \\
+\hline
+\texttt{main.py} & 632 (all logic) & 19 (wiring) \\
+\hline
+\texttt{db.py} & N/A & 43 \\
+\hline
+\texttt{models/schemas.py} & N/A & 78 \\
+\hline
+\texttt{routers/cases.py} & N/A & 395 \\
+\hline
+\texttt{services/cases.py} & N/A & 167 \\
+\hline
+\texttt{repositories/cases.py} & N/A & 155 \\
+\hline
+\textbf{Total LOC / files} & \textbf{632 / 1} & \textbf{857 / 6} \\
+\hline
+\end{tabularx}
+}
+\end{table}
+
+Table~\ref{tab4} summarises cyclomatic complexity. The monolithic \texttt{import\_json} reached CC\,=\,14 (grade C), combining validation, deduplication, database upsert, and import logging in one function. The modular version split these responsibilities across three dedicated functions, the most complex of which reached only CC\,=\,9 (grade B), yielding a modular average of 2.24, a 42\% reduction from 3.87, with no function exceeding grade B. This is consistent with Sas et al.\ \cite{b3} and with Pisch et al.\ \cite{b4}, whose M-score framework treats complexity distribution as a key modularity indicator.
+
+
+\begin{table}[H]
+\caption{Cyclomatic Complexity by Architecture (Radon CC)}
+\label{tab4}
+\centering
+{\scriptsize
+\begin{tabularx}{\columnwidth}{|Y|c|c|}
+\hline
+\textbf{Metric} & \textbf{Mono} & \textbf{Modular} \\
+\hline
+Blocks analysed & 15 & 37 \\
+\hline
+Average CC & 3.87 & 2.24 \\
+\hline
+Highest function & C (14) & B (9) \\
+\hline
+Grade-B+ functions & 3 & 1 \\
+\hline
+Grade-A functions & 12 of 15 & 36 of 37 \\
+\hline
+\end{tabularx}
+}
+\end{table}
+
+Both suites produced 13 deprecation warnings for \texttt{datetime.utcnow()}; in the monolithic suite the warning pointed to line 379 of \texttt{main.py} inside a dense multi-purpose function, whilst the modular warning pointed to \texttt{services/cases.py:56}, where the filename alone identifies the responsible layer. This difference in fault discoverability is consistent with Mumtaz et al.\ \cite{b1} and Esposito et al.\ \cite{b6}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{../Images/cc_comparison.png}
+\caption{Cyclomatic Complexity Comparison: Monolithic vs Modular}
+\label{fig:cc-comparison}
+\end{figure}
+
+\subsection*{RQ2: Testability}
+
+Testability was evaluated by executing the same 29-test API contract suite against both implementations and comparing mock injection precision; Table~\ref{tab5} presents the execution results.
+
+
+\begin{table}[H]
+\caption{Test Execution Summary (pytest 8.3.3, Python 3.13.13)}
+\label{tab5}
+\centering
+{\scriptsize
+\begin{tabularx}{\columnwidth}{|Y|c|c|}
+\hline
+\textbf{Metric} & \textbf{Mono} & \textbf{Modular} \\
+\hline
+Tests passed & 29 / 29 & 29 / 29 \\
+\hline
+Tests failed & 0 & 0 \\
+\hline
+Warnings & 13 & 13 \\
+\hline
+Runtime & 0.39\,s & 0.53\,s \\
+\hline
+\end{tabularx}
+}
+\end{table}
+
+Both implementations passed all 29 tests, confirming functional equivalence as a prerequisite for valid comparison.
+
+The more informative distinction is mock injection precision (Table~\ref{tab6}): in the modular version each mock target was patched at its specific layer boundary, enabling fault attribution to a precise architectural layer, a property the monolithic design cannot offer without refactoring \cite{b7}. Esposito et al.\ \cite{b6} found that coupling correlated with observable quality outcomes; layer separation makes each concern independently testable.
+
+
+\begin{table}[H]
+\caption{Mock Injection Strategy by Architecture}
+\label{tab6}
+\centering
+{\scriptsize
+\begin{tabularx}{\columnwidth}{|Y|Y|Y|}
+\hline
+\textbf{Concern} & \textbf{Monolithic} & \textbf{Modular} \\
+\hline
+DB connection & \texttt{main.get\_conn} & \texttt{router\_cases} \texttt{.get\_conn} \\
+\hline
+Bulk insert & \texttt{main.execute\_} \texttt{values} & \texttt{repo\_cases.execute\_} \texttt{values} \\
+\hline
+Patch accuracy & Module-level & Layer-boundary \\
+\hline
+\end{tabularx}
+}
+\end{table}
+
+\subsection*{RQ3: Operational Performance}
+
+Performance was evaluated using test-suite collection time as a proxy for framework overhead under mocked conditions. The 0.14\,s difference (36\%) is attributable to Python resolving six additional module imports and not to request processing logic. Crucially, both architectures share an identical FastAPI routing layer, the same PostgreSQL schema, and no performance-relevant differences in query structure, meaning the modular file split imposed no measurable framework-level performance penalty. Live throughput and latency benchmarks were not conducted as all database calls were replaced by in-memory mock objects; a live benchmark using a load-testing harness against the run protocol in Section III would complete the RQ3 evaluation.
+
+\subsection*{RQ4: Change Impact}
+
+Change impact was assessed through two controlled scenarios: (1) fixing the deprecated \texttt{datetime.utcnow()} call; (2) adding a \texttt{case\_type} filter to the search endpoint across route, service, and SQL layers. Tables~\ref{tab7} and \ref{tab8} summarise the results.
+
+
+\begin{table}[H]
+\caption{Change Impact: Deprecation Fix}
+\label{tab7}
+\centering
+{\scriptsize
+\begin{tabularx}{\columnwidth}{|p{1.7cm}|Y|Y|}
+\hline
+\textbf{Dimension} & \textbf{Monolithic} & \textbf{Modular} \\
+\hline
+Files modified & 1 (\texttt{main.py}) & 1 (\texttt{services/cases.py}) \\
+\hline
+Line & 379 & 56 \\
+\hline
+Navigation & Scan 632-line file & Filename identifies the layer \\
+\hline
+Side-effect risk & Higher; inside a dense multi-purpose function & Lower; single-responsibility function \\
+\hline
+\end{tabularx}
+}
+\end{table}
+
+
+\begin{table}[H]
+\caption{Change Impact: Adding a Search Filter}
+\label{tab8}
+\centering
+{\scriptsize
+\begin{tabularx}{\columnwidth}{|p{1.7cm}|Y|Y|}
+\hline
+\textbf{Dimension} & \textbf{Monolithic} & \textbf{Modular} \\
+\hline
+Files modified & 1 (\texttt{main.py}) & 3 (router, service, repository) \\
+\hline
+Co-change scope & All edits in one file & Distributed across layer boundaries \\
+\hline
+Regression risk & Higher; adjacent to unrelated logic & Lower; each layer independently reviewable \\
+\hline
+\end{tabularx}
+}
+\end{table}
+
+In Scenario 1 both architectures touched one file, but locating the change in 632 lines of monolithic logic carried higher side-effect risk than navigating directly to a single-responsibility service file. In Scenario 2 the modular architecture spread changes across three bounded layer files, the only metric where it had a higher raw count, yet with a lower regression risk overall. Both patterns are consistent with the co-change findings of Sas et al.\ \cite{b3} and the Adyen remodularisation case study of Schr\"{o}der et al.\ \cite{b7}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{../Images/change_impact.png}
+\caption{Change Impact Comparison: Files Modified, Navigation Effort, and Regression Risk (1\,=\,Low, 3\,=\,High) across two controlled modification scenarios}
+\label{fig:change-impact}
+\end{figure}
+
+Across all four research questions, the modular architecture demonstrated measurable advantages in complexity distribution, fault discoverability, mock injection precision, and change traceability, outweighing the monolithic benefits of lower LOC and marginally faster test collection. These findings support the hypothesis that a modular architecture is more maintainable and testable.
+
+In relation to prior research, these findings both extend and qualify the existing literature. Sas et al.\ \cite{b3} identified co-change propagation in production systems where team size, commit history, and accumulated technical debt act as confounds; this study reproduces the same directional pattern in a controlled artefact setting, strengthening the causal inference that boundary structure itself drives co-change behaviour. Esposito et al.\ \cite{b6} found that coupling correlated with observable quality outcomes at system scale; this study provides a more granular mechanism: mock injection layer accuracy is a directly measurable coupling proxy that can be verified from test code alone, without requiring a full quality history. Su and Li \cite{b5} frame the LOC overhead of modularisation as a trade-off requiring contextual judgment; this study quantifies it: the 35.6\% LOC increase produced a 42\% reduction in average cyclomatic complexity and lifted grade-A functions from 80\% to 97.3\%, providing evidence that the overhead is justified in this context. No reviewed study provided a protocol for benchmarking performance overhead attributable specifically to modular file structure, a gap future work should address alongside extending evaluation to additional technology stacks and applying the effort estimation framework of Tan et al.\ \cite{b2} to quantify remodularisation cost. Compared with the reviewed literature, which predominantly analysed existing production systems, the use of two controlled, functionally equivalent artefacts represents a distinct methodological contribution.
+
+\section{Conclusion}
+
+This research tested the hypothesis that a modular backend architecture is more maintainable and testable than a monolithic backend, using two purpose-built, functionally equivalent FastAPI artefacts evaluated through structural analysis, automated testing, and controlled change scenarios.
+
+The findings confirm that the modular architecture is more maintainable and testable. RQ1 revealed a 42\% reduction in average cyclomatic complexity and improved fault discoverability under the modular design. RQ2 demonstrated layer-boundary-accurate mock injection, enabling fault attribution to a specific architectural layer in a way the monolithic design cannot support without refactoring. RQ3 was partially addressed through proxy data; no structural performance differences were identified across the shared framework configurations. RQ4 showed that the modular design constrained co-change scope to well-defined layer boundaries and reduced regression risk. These conclusions affirm the hypothesis posed at the outset of this study.
+
+Whilst the methodology yielded clear and consistent findings, some limitations should be acknowledged. First, the study was constrained to a single application domain and a single technology stack (FastAPI with PostgreSQL). This means that the observed advantages of the modular architecture in terms of complexity and change traceability may not transfer uniformly to systems with different structural characteristics, such as event-driven architectures or microservice deployments, where the definition of a module boundary differs fundamentally. Second, the performance benchmark for RQ3 was limited to test-suite collection time, as all database calls were replaced by in-memory mock objects for test isolation. This means that no evidence was produced regarding ingestion throughput or per-endpoint latency under realistic load, and therefore no conclusions about production-level operational performance can be drawn from the RQ3 findings. Third, whilst the synthetic dataset ensured reproducibility and eliminated data privacy concerns, it was generated under fixed statistical parameters and may not capture the irregular patterns, missing values, or schema drift that characterise real-world data ingestion pipelines; the robustness of the import validation logic under such conditions therefore remains untested.
+
+To address such limitations and further advance research in this area, several avenues for further investigation are proposed. Replicating the comparison with a live database and load-testing harness would complete the RQ3 evaluation as described in Section III. Extending the study to additional stacks such as Node.js or Spring Boot would test whether the maintainability advantages generalise beyond the Python FastAPI context. Applying the effort estimation framework of Tan et al.\ \cite{b2} to quantify restructuring cost would enable practitioners to weigh the benefits of modularisation against its reorganisation overhead.
 
 \begin{thebibliography}{00}
 \bibitem{b1} H. Mumtaz, P. Singh, and K. Blincoe, “A Systematic Mapping Study on Architectural Smells Detection,” Journal of Systems and Software, vol. 173, Art. no. 110885, 2021, doi: 10.1016/j.jss.2020.110885.
