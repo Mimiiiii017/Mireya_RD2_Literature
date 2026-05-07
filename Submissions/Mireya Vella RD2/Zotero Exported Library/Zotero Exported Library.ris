@@ -1,0 +1,261 @@
+TY  - JOUR
+TI  - A systematic mapping study on architectural smells detection
+AU  - Mumtaz, Haris
+AU  - Singh, Paramvir
+AU  - Blincoe, Kelly
+T2  - Journal of Systems and Software
+AB  - The recognition of the need for high-quality software architecture is evident from the increasing trend in investigating architectural smells. Detection of architectural smells is paramount because they can seep through to design and implementation stages if left unidentiﬁed. Many architectural smells detection techniques and tools are proposed in the literature. The diversity in the detection techniques and tools suggests the need for their collective analysis to identify interesting aspects for practice and open research areas. To fulﬁll this, in this paper, we unify the knowledge about the detection of architectural smells through a systematic mapping study. We report on the existing detection techniques and tools for architectural smells to identify their limitations. We ﬁnd there has been limited investigation of some architectural smells (e.g., micro-service smells); many architectural smells are not detected by tools yet; and there are limited empirical validations of techniques and tools. Based on our ﬁndings, we suggest several open research problems, including the need to 1) investigate undetected architectural smells (e.g., Java package smells), 2) improve the coverage of architectural smell detection across architecture styles (e.g., service-oriented and cloud), and 3) perform empirical validations of techniques and tools in industry across different languages and project domains.
+DA  - 2021/03//
+PY  - 2021
+DO  - 10.1016/j.jss.2020.110885
+DP  - DOI.org (Crossref)
+VL  - 173
+SP  - 110885
+J2  - Journal of Systems and Software
+LA  - en
+SN  - 01641212
+UR  - https://linkinghub.elsevier.com/retrieve/pii/S0164121220302752
+Y2  - 2026/03/02/22:16:46
+L1  - files/31/Mumtaz et al. - 2021 - A systematic mapping study on architectural smells detection.pdf
+N1  - <div data-schema-version="9"><ol>
+<li>
+<span style="color: rgb(191, 191, 191);"><span style="background-color: rgb(25, 26, 27);">Used in RQ1 to justify fault discoverability as a maintainability dimension.</span></span>
+</li>
+<li>
+<span style="color: rgb(191, 191, 191);"><span style="background-color: rgb(25, 26, 27);">Systematic mapping study; broad coverage but no direct causal evidence.</span></span>
+</li>
+<li>
+<span style="color: rgb(191, 191, 191);"><span style="background-color: rgb(25, 26, 27);">Supports the background argument that architectural smell research is diverse and not yet standardised.</span></span>
+</li>
+</ol>
+</div>
+KW  - [1]
+KW  - smell-detection
+ER  - 
+
+TY  - JOUR
+TI  - Exploring the Relation Between Co-changes and Architectural Smells
+AU  - Sas, Darius
+AU  - Avgeriou, Paris
+AU  - Kruizinga, Ronald
+AU  - Scheedler, Ruben
+T2  - SN Computer Science
+AB  - The interplay between Maintainability and Reliability can be particularly complex and different kinds of trade-offs may arise when developers try to optimise for either one of these two qualities. To further understand how Maintainability and Reliability influence each other, we perform an empirical study using architectural smells and source code file co-changes as proxies for these two qualities, respectively. The study is designed using an exploratory multiple-case case study following well-know guidelines and using fourteen open source Java projects. Three different research questions are identified and investigated through statistical analysis. Co-changes are detected by using both a state-of-the-art algorithm and a novel approach. The three architectural smells selected are among the most important from the literature and are detected using open source tools. The results show that 50% of co-changes eventually end up taking part in an architectural smell. Moreover, statistical tests indicate that in 50% of the projects, files and packages taking part in smells are more likely to co-change than non-smelly files. Finally, co-changes were also found to appear before smells 90% of the times a smell and a co-change appear in the same file pair. Our findings show that Reliability is indirectly affected by low levels of Maintainability even at the architectural level. This is because low-quality components require more frequent changes by the developers, increasing chances to eventually introduce faults.
+DA  - 2021/02//
+PY  - 2021
+DO  - 10.1007/s42979-020-00407-5
+DP  - DOI.org (Crossref)
+VL  - 2
+IS  - 1
+SP  - 13
+J2  - SN COMPUT. SCI.
+LA  - en
+SN  - 2662-995X, 2661-8907
+UR  - http://link.springer.com/10.1007/s42979-020-00407-5
+Y2  - 2026/03/02/22:17:15
+L1  - files/36/Sas et al. - 2021 - Exploring the Relation Between Co-changes and Architectural Smells.pdf
+N1  - <div data-schema-version="9"><ol>
+<li>
+<span style="color: rgb(191, 191, 191);"><span style="background-color: rgb(25, 26, 27);">Key evidence for RQ1 and RQ4; concentrated responsibility linked to broader co-change scope.</span></span>
+</li>
+<li>
+<span style="color: rgb(191, 191, 191);"><span style="background-color: rgb(25, 26, 27);">Repository mining methodology; internal validity limited by commit granularity.</span></span>
+</li>
+<li>
+<span style="color: rgb(191, 191, 191);"><span style="background-color: rgb(25, 26, 27);">Co-change used as a proxy for coupling, which aligns with the change impact scenarios in this study.</span></span>
+</li>
+</ol>
+</div>
+KW  - [3]
+KW  - co-change
+ER  - 
+
+TY  - GEN
+TI  - Modular Monolith: Is This the Trend in Software Architecture?
+AU  - Su, Ruoyu
+AU  - Li, Xiaozhou
+AB  - Recently modular monolith architecture has attracted the attention of practitioners, as Google proposed "Service Weaver" framework to enable developers to write applications as modular monolithic and deploy them as a set of microservices. Google considered it as a framework that has the best of both worlds and it seems to be a trend in software architecture. This paper aims to understand the definition of the modular monolith in industry and investigate frameworks and cases building modular monolith architecture. We conducted a systematic grey literature review, and the results show that modular monolith combines the advantages of monoliths with microservices. We found three frameworks and four cases of building modular monolith architecture. In general, the modular monolith is an alternative way to microservices, and it also could be a previous step before systems migrate to microservices.
+DA  - 2024/01/22/
+PY  - 2024
+DO  - 10.48550/arXiv.2401.11867
+DP  - arXiv.org
+LA  - en
+PB  - arXiv
+ST  - Modular Monolith
+UR  - http://arxiv.org/abs/2401.11867
+Y2  - 2026/03/02/22:17:23
+L1  - files/38/Su and Li - 2024 - Modular Monolith Is This the Trend in Software Architecture.pdf
+N1  - <div data-schema-version="9"><ol>
+<li>
+<span style="color: rgb(191, 191, 191);"><span style="background-color: rgb(25, 26, 27);">Contextualises the LOC trade-off in RQ1; modular designs exchange brevity for separation of concerns.</span></span>
+</li>
+<li>
+<span style="color: rgb(191, 191, 191);"><span style="background-color: rgb(25, 26, 27);">Workshop paper; lighter empirical evidence, mainly conceptual positioning.</span></span>
+</li>
+<li>
+<span style="color: rgb(191, 191, 191);"><span style="background-color: rgb(25, 26, 27);">Useful for framing the modular monolith as a middle-ground design pattern.</span></span>
+</li>
+</ol>
+</div>
+KW  - [5]
+KW  - modular-monolith
+ER  - 
+
+TY  - CONF
+TI  - M-score: An Empirically Derived Software Modularity Metric
+AU  - Pisch, Ernst
+AU  - Cai, Yuanfang
+AU  - Kazman, Rick
+AU  - Lefever, Jason
+AU  - Fang, Hongzhou
+T2  - ESEM '24: ACM / IEEE International Symposium on Empirical Software Engineering and Measurement
+AB  - Background: Software practitioners need reliable metrics to monitor software evolution, compare projects, and understand modularity variations. This is crucial for assessing architectural improvement or decay. Existing popular metrics offer little help, especially in systems with implicitly connected but seemingly isolated files. Aim: Our objective is to explore why and how state-of-the-art modularity measures fail to serve as effective metrics and to devise a new metric that more accurately captures complexity changes, and is less distorted by sizes or isolated files.
+Methods: We analyzed metric scores for 1,220 releases across 37 projects to identify the root causes of their shortcomings. This led to the creation of M-score, a new software modularity metric that combines the strengths of existing metrics while addressing their flaws. M-score rewards small, independent modules, penalizes increased coupling, and treats isolated modules and files consistently.
+Results: Our evaluation revealed that M-score outperformed other modularity metrics in terms of stability, particularly with respect to isolated files, because it captures coupling density and module independence. It also correlated well with maintenance effort, as indicated by historical maintainability measures, meaning that the higher the M-score, the more likely maintenance tasks can be accomplished independently and in parallel.
+Conclusions: Our research identifies the shortcomings of current metrics in accurately depicting software complexity and proposes M-score, a new metric with superior stability and better reflection of complexity and maintenance effort, making it a promising metric for software architectural assessments, comparison, and monitoring.
+C1  - Barcelona Spain
+C3  - Proceedings of the 18th ACM/IEEE International Symposium on Empirical Software Engineering and Measurement
+DA  - 2024/10/24/
+PY  - 2024
+DO  - 10.1145/3674805.3686697
+DP  - DOI.org (Crossref)
+SP  - 382
+EP  - 392
+LA  - en
+PB  - ACM
+SN  - 979-8-4007-1047-6
+ST  - M-score
+UR  - https://dl.acm.org/doi/10.1145/3674805.3686697
+Y2  - 2026/03/02/22:17:28
+L1  - files/39/Pisch et al. - 2024 - M-score An Empirically Derived Software Modularity Metric.pdf
+N1  - <div data-schema-version="9"><ol>
+<li>
+<span style="color: rgb(191, 191, 191);"><span style="background-color: rgb(25, 26, 27);">M-score framework used to frame LOC and CC data as a multi-dimensional modularity indicator.</span></span>
+</li>
+<li>
+<span style="color: rgb(191, 191, 191);"><span style="background-color: rgb(25, 26, 27);">Empirically derived metric; stronger validity claim than theory-only approaches.</span></span>
+</li>
+<li>
+<span style="color: rgb(191, 191, 191);"><span style="background-color: rgb(25, 26, 27);">Notes that modularity is multi-dimensional, which supports using CC and change impact alongside LOC.</span></span>
+</li>
+</ol>
+</div>
+KW  - [4]
+KW  - m-score
+ER  - 
+
+TY  - JOUR
+TI  - On the correlation between architectural smells and static analysis warnings
+AU  - Esposito, Matteo
+AU  - Robredo, Mikel
+AU  - Arcelli Fontana, Francesca
+AU  - Lenarduzzi, Valentina
+T2  - Software Quality Journal
+AB  - Software quality assurance is essential during software development and maintenance. Static Analysis Tools (SAT) are widely used for assessing code quality. Architectural smells are becoming more daunting to address and evaluate among quality issues. We aim to understand the relationships between Static Analysis Warnings (“warnings”) and Architectural Smells (“smell”) to guide developers/maintainers in focusing their effort on warnings more prone to co-occurring with smell. We performed an empirical study on 103 Java projects totaling 72 million LOC belonging to projects from a vast set of domains, and 785 warnings were detected by three SAT, Checkstyle, Findbugs, PMD, SonarQube, and 4 architectural smells were detected by the ARCAN tool. We analyzed how warnings influence smell presence. Finally, we proposed a smell remediation effort prioritization based on warning severity and warning proneness to specific smells. Our study reveals a moderate correlation between warnings and smells. Different combinations of SATs and warnings significantly affect smell occurrence, with certain warnings more Likely to cooccur with specific smells. Conversely, 33.79% of warnings are “non-co-occurring” with any of the smells in our dataset. This provides an early indicator for potential architectural concerns before resource-intensive architectural analysis is performed. Practitioners can ignore about a third of warnings and focus on those most likely to be associated with smells. Prioritizing smell remediation based on warning severity or warning proneness to specific smells results in effective rankings like those based on smell severity. While not a substitute for specialized tools like ARCAN, warning-based prioritization provides a pragmatic bridge between low-level warnings and high-level architectural issues, particularly useful in contexts lacking full architectural visibility.
+DA  - 2025/12//
+PY  - 2025
+DO  - 10.1007/s11219-025-09730-7
+DP  - DOI.org (Crossref)
+VL  - 33
+IS  - 4
+SP  - 33
+J2  - Software Qual J
+LA  - en
+SN  - 0963-9314, 1573-1367
+UR  - https://link.springer.com/10.1007/s11219-025-09730-7
+Y2  - 2026/03/02/22:17:32
+L1  - files/40/Esposito et al. - 2025 - On the correlation between architectural smells and static analysis warnings.pdf
+N1  - <div data-schema-version="9"><ol>
+<li>
+<span style="color: rgb(191, 191, 191);"><span style="background-color: rgb(25, 26, 27);">Triangulates smell detection with static analysis warnings; supports construct validity.</span></span>
+</li>
+<li>
+<span style="color: rgb(191, 191, 191);"><span style="background-color: rgb(25, 26, 27);">Used in RQ1 (deprecation discoverability) and RQ2 (coupling and test isolation).</span></span>
+</li>
+<li>
+<span style="color: rgb(191, 191, 191);"><span style="background-color: rgb(25, 26, 27);">Correlation study; does not establish causation between smells and quality outcomes.</span></span>
+</li>
+</ol>
+</div>
+KW  - [6]
+KW  - static-analysis
+ER  - 
+
+TY  - JOUR
+TI  - Closing the Loop for Software Remodularisation: REARRANGE, An Effort Estimation Approach for Software Clustering Based Remodularisation
+AU  - Tan, Alvin Jian Jia
+AU  - Chong, Chun Yong
+AU  - Aleti, Aldeida
+T2  - Information and Software Technology
+AB  - Objective: This work aims to address this gap by introducing an effoRt Estimation AppRoach foR softwAre clusteriNG-based rEmodularisation (REARRANGE) to close the loop in extant software clustering and remodularisation research by estimating the time required to carry out the suggested refactoring operations based on the history of the evolution of the software. By providing tangible estimates of refactoring effort in personhours, we can inform developers of complex and time-consuming refactoring operations that will help prioritise refactoring efforts, allowing practitioners to weave in these activities during sprint planning.
+Method: REARRANGE builds a machine learning model to predict effort estimation based on past commit activity which extracts Software Features (lines of code, number of methods), Refactoring Features (refactoring type, source and destination) and Dependency Features (dependencies between classes). REARRANGE is then compared against sanity checks, baseline effort estimation models, and state-of-the-art software estimation models. We also attempt to cross-validate REARRANGE’s effort estimation with software developers.
+Results: Experimented through 25 open-source Java-based projects, the proposed approach estimated the refactoring effort of the test subjects with a Mean Absolute Error (MAE) of 5.47 person-hours against the MAE of the next-best approach of 453.31 person-hours. Based on a survey conducted among software developers, REARRANGE consistently delivers accurate estimates in 93.6% of cases.
+Conclusion: The lack of a direct comparison for REARRANGE highlights the need for a refactoring effortfocused estimation model that provides tangible effort estimates in person-hours for refactoring operations. Only then can developers selectively choose relevant refactoring operations while considering the available time and budget constraints, bridging the gap between software clustering research and real-world application.
+DA  - 2024/12//
+PY  - 2024
+DO  - 10.1016/j.infsof.2024.107567
+DP  - DOI.org (Crossref)
+VL  - 176
+SP  - 107567
+J2  - Information and Software Technology
+LA  - en
+SN  - 09505849
+ST  - REARRANGE
+UR  - https://linkinghub.elsevier.com/retrieve/pii/S0950584924001721
+Y2  - 2026/03/02/22:17:37
+L1  - files/41/Tan et al. - 2024 - Closing the Loop for Software Remodularisation REARRANGE, An Effort Estimation Approach for Softwar.pdf
+N1  - <div data-schema-version="9"><ol>
+<li>
+<span style="color: rgb(191, 191, 191);"><span style="background-color: rgb(25, 26, 27);">Cited in the conclusion for future work; quantifying the cost of restructuring the monolithic implementation.</span></span>
+</li>
+<li>
+<span style="color: rgb(191, 191, 191);"><span style="background-color: rgb(25, 26, 27);">REARRANGE tool provides effort estimates for clustering-based remodularisation.</span></span>
+</li>
+<li>
+<span style="color: rgb(191, 191, 191);"><span style="background-color: rgb(25, 26, 27);">Conference companion venue; early-stage evidence, not yet a full empirical study.</span></span>
+</li>
+</ol>
+</div>
+KW  - [2]
+KW  - effort-estimation
+ER  - 
+
+TY  - CONF
+TI  - Search-Based Software Re-Modularization: A Case Study at Adyen
+AU  - Schroder, Casper
+AU  - Van Der Feltz, Adriaan
+AU  - Panichella, Annibale
+AU  - Aniche, Mauricio
+T2  - 2021 IEEE/ACM 43rd International Conference on Software Engineering: Software Engineering in Practice (ICSE-SEIP)
+AB  - Deciding what constitutes a single module, what classes belong to which module or the right set of modules for a speciﬁc software system has always been a challenging task. The problem is even harder in large-scale software systems composed of thousands of classes and hundreds of modules. Over the years, researchers have been proposing different techniques to support developers in re-modularizing their software systems. In particular, the search-based software re-modularization is an active research topic within the software engineering community for more than 20 years.
+C1  - Madrid, ES
+C3  - 2021 IEEE/ACM 43rd International Conference on Software Engineering: Software Engineering in Practice (ICSE-SEIP)
+DA  - 2021/05//
+PY  - 2021
+DO  - 10.1109/ICSE-SEIP52600.2021.00017
+DP  - DOI.org (Crossref)
+SP  - 81
+EP  - 90
+LA  - en
+PB  - IEEE
+SN  - 978-1-6654-3869-8
+ST  - Search-Based Software Re-Modularization
+UR  - https://ieeexplore.ieee.org/document/9402120/
+Y2  - 2026/03/02/22:17:41
+L1  - files/42/Schroder et al. - 2021 - Search-Based Software Re-Modularization A Case Study at Adyen.pdf
+N1  - <div data-schema-version="9"><ol>
+<li>
+<span style="color: rgb(191, 191, 191);"><span style="background-color: rgb(25, 26, 27);">Adyen case study; supports RQ2 layer isolation and RQ4 change propagation arguments.</span></span>
+</li>
+<li>
+<span style="color: rgb(191, 191, 191);"><span style="background-color: rgb(25, 26, 27);">Industrial setting gives strong practical relevance but limits generalisability.</span></span>
+</li>
+<li>
+<span style="color: rgb(191, 191, 191);"><span style="background-color: rgb(25, 26, 27);">Search-based approach to remodularisation; shows clear module boundaries reduce unexpected change propagation.</span></span>
+</li>
+</ol>
+</div>
+KW  - [7]
+KW  - industrial-case-study
+ER  - 
+
